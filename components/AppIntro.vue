@@ -17,6 +17,17 @@ const { data, status } = defineProps({
       <p class="text-2xl">
         Klicke, um den Kalender anzuzeigen und eine Reservierung anzufordern.
       </p>
+      <a href="#event-types">
+        <button
+          class="font-bold text-lg text-start min-w-52 mt-5 flex justify-between items-center group hover:text-primary"
+        >
+          <p class="whitespace-nowrap">Mehr erfahren</p>
+
+          <MoveDown
+            class="w-6 h-6 opacity-0 duration-300 -translate-y-4 transition-all text-black group-hover:translate-y-0 group-hover:text-primary group-hover:opacity-100"
+          ></MoveDown>
+        </button>
+      </a>
     </section>
 
     <section class="flex gap-10 justify-between">
@@ -43,16 +54,6 @@ const { data, status } = defineProps({
               ></MoveRight>
             </button>
           </div>
-
-          <button
-            class="font-bold text-lg text-start min-w-52 mt-5 flex justify-between items-center group hover:text-primary"
-          >
-            <p class="whitespace-nowrap">Mehr erfahren</p>
-
-            <MoveDown
-              class="w-6 h-6 opacity-0 duration-300 -translate-y-4 transition-all text-black group-hover:translate-y-0 group-hover:text-primary group-hover:opacity-100"
-            ></MoveDown>
-          </button>
         </div>
       </template>
 
