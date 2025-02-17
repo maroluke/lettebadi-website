@@ -92,11 +92,13 @@ onMounted(async () => {
 
     <Menu />
 
-    <AboutUs />
-
     <EventTypes :data="eventData" :status="status" />
 
+    <AboutUs />
+
     <OpeningHours />
+
+    <Footer />
   </div>
 
   <section

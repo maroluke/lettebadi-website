@@ -26,8 +26,8 @@ const dataContent = [
 </script>
 
 <template>
-  <div id="event-types" class="flex flex-col gap-8 grow">
-    <section class="rounded-xl flex flex-col">
+  <div id="event-types" class="flex flex-col gap-8 grow pb-32">
+    <section class="rounded-xl flex flex-col gap-10">
       <div class="flex justify-end items-center gap-40">
         <div class="flex flex-col mb-10 flex-1 max-w-screen-md">
           <h2 class="text-6xl mb-10">

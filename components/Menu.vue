@@ -3,6 +3,12 @@
 <template>
   <div id="menu" class="flex flex-col gap-8 grow mx-auto pb-32">
     <section class="rounded-xl flex gap-20 items-center">
+      <img
+        src="~/assets/media/menu.jpg"
+        alt="Tagesmenu Lettebadi"
+        class="max-w-96 rounded-full shadow-lg"
+      />
+
       <div class="max-w-screen-md">
         <h2 class="text-6xl mb-10">
           Wir präsentieren das Tagesmenü von heute:
@@ -38,12 +44,6 @@
           </div>
         </div>
       </div>
-
-      <img
-        src="~/assets/media/menu.jpg"
-        alt="Tagesmenu Lettebadi"
-        class="max-w-96 rounded-full shadow-lg"
-      />
     </section>
   </div>
 </template>
