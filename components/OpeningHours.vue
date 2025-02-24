@@ -3,10 +3,14 @@
 <template>
   <div
     id="opening-hours"
-    class="flex flex-col gap-8 w-full max-w-screen-2xl mx-auto pb-40"
+    class="flex flex-col gap-8 w-full max-w-screen-2xl mx-auto pt-40"
   >
     <section class="rounded-xl">
       <div class="flex gap-8 justify-around items-center">
+        <div class="grow text-primary pr-20">
+          <FloatingWomen2 class="w-full h-full" />
+        </div>
+
         <div class="max-w-screen-sm">
           <h1 class="mb-20 uppercase tracking-wider inline-block text-lg">
             Öffnungszeiten und Kontakt
@@ -29,10 +33,8 @@
               <a href="#" class="underline">Lesen Sie hier mehr</a>.
             </p>
           </div>
-        </div>
 
-        <div class="grow text-primary">
-          <FloatingWomen2 class="w-full h-full" />
+          <Footer />
         </div>
       </div>
     </section>

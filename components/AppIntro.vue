@@ -1,9 +1,13 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="w-2/3 px-60 max-w-screen-2xl mx-auto">
-    <AboutUs />
-  </div>
+  <div
+    class="flex justify-between items-center w-full min-h-screen max-w-screen-3xl px-28"
+  >
+    <div class="w-1/2 mx-auto">
+      <AboutUs />
+    </div>
 
-  <FloatingWomen1 class="w-1/3 h-full text-primary" />
+    <FloatingWomen1 class="w-1/2 h-full text-primary" />
+  </div>
 </template>

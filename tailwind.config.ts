@@ -49,6 +49,11 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      screens: {
+        xs: "320px",
+        "3xl": "1920px",
+        "4xl": "2560px",
+      },
       borderRadius: {
         xl: "calc(var(--radius) + 4px)",
         lg: "var(--radius)",

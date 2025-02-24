@@ -28,7 +28,7 @@ async function fetchCalEventTypes() {
 const activeSection = ref<string | null>(null);
 
 onMounted(async () => {
-  observeSections(["about", "service", "events", "contact"], (id) => {
+  observeSections(["about", "service", "events", "opening-hours"], (id) => {
     activeSection.value = id;
   });
 
@@ -89,17 +89,16 @@ onMounted(async () => {
 
 <template>
   <div class="flex flex-col relative">
-    <div class="fixed top-0 left-0 right-0 z-10 bg-white drop-shadow px-20">
-      <section class="flex items-center justify-between shrink w-full">
+    <div class="fixed top-0 left-0 right-0 z-10 p-8">
+      <section
+        class="bg-white border border-primary flex px-20 items-center justify-between shrink w-full"
+      >
         <Logo class="py-5 h-24 w-auto" />
         <Nav :activeSection="activeSection" />
       </section>
     </div>
 
-    <div
-      id="about"
-      class="flex justify-between grow items-center w-full min-h-screen"
-    >
+    <div id="about" class="grow">
       <AppIntro :data="eventData" :status="status" />
     </div>
 
@@ -110,8 +109,6 @@ onMounted(async () => {
     <!-- <EventTypes :data="eventData" :status="status" /> -->
 
     <OpeningHours />
-
-    <Footer />
   </div>
 
   <section

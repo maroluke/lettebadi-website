@@ -8,9 +8,9 @@ const { eventData, status } = defineProps({
 </script>
 
 <template>
-  <section id="events" class="rounded-xl flex flex-col gap-10">
-    <div class="flex justify-end items-center gap-40">
-      <div class="flex flex-col mb-10 flex-1 max-w-screen-md">
+  <section id="events" class="rounded-xl flex flex-col gap-10 overflow-hidden">
+    <div class="flex justify-between items-center gap-40">
+      <div class="flex flex-col mb-10 flex-1 max-w-screen-md pl-28 pt-40">
         <h1 class="mb-20 uppercase tracking-wider inline-block text-lg">
           Veranstaltungen
         </h1>
@@ -40,14 +40,16 @@ const { eventData, status } = defineProps({
                 :data-cal-link="`lettebadi/${event.slug}`"
                 :data-cal-namespace="event.slug"
                 data-cal-config='{"layout": "month_view"}'
-                class="group transition-all border-t-4 border-black pt-5 hover:text-primary hover:border-primary"
+                class="text-6xl uppercase group transition-all border-t-4 border-black pt-5 hover:text-primary hover:border-primary"
               >
                 {{ event.title }}
 
                 <button
                   class="font-bold text-lg text-start min-w-52 flex justify-between items-center w-full"
                 >
-                  <p class="whitespace-nowrap">Verfügbarkeit prüfen</p>
+                  <p class="whitespace-nowrap uppercase">
+                    Verfügbarkeit prüfen
+                  </p>
                   <MoveRight
                     class="w-6 h-6 opacity-0 duration-300 -translate-x-4 transition-all group-hover:opacity-100 group-hover:translate-x-0"
                   ></MoveRight>

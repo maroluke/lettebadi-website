@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div id="service" class="mx-auto py-32">
+  <div id="service" class="mx-auto pt-32">
     <section class="flex gap-20 items-center">
       <img
         src="~/assets/media/menu.jpg"

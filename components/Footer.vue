@@ -3,7 +3,7 @@
 <template>
   <div
     id="contact"
-    class="flex flex-col gap-8 w-full max-w-screen-2xl mx-auto pb-40"
+    class="flex flex-col gap-8 w-full max-w-screen-2xl mx-auto pt-10 pb-40"
   >
     <section class="rounded-xl">
       <div class="flex gap-8 items-center">
