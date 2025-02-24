@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <nav class="flex gap-20 text-lg uppercase">
+  <nav class="flex gap-20 text-2xl">
     <NavLink :active="activeSection === 'about'" id="about" label="Badi" />
     <NavLink
       :active="activeSection === 'service'"
