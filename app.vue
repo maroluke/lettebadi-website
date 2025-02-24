@@ -93,7 +93,7 @@ onMounted(async () => {
       <section
         class="bg-white border border-primary flex px-20 items-center justify-between shrink w-full"
       >
-        <Logo class="py-5 h-24 w-auto" />
+        <Logo class="py-5 w-36" />
         <Nav :activeSection="activeSection" />
       </section>
     </div>
