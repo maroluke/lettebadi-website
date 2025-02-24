@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div id="menu" class="flex flex-col gap-8 grow mx-auto pb-32">
+  <div id="events" class="flex flex-col gap-8 grow mx-auto pb-32">
     <section class="rounded-xl flex gap-20 items-center">
       <img
         src="~/assets/media/menu.jpg"

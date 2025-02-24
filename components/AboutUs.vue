@@ -1,12 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div
-    id="about"
-    class="flex flex-col gap-8 grow max-w-screen-lg mx-auto pt-32"
-  >
+  <div class="flex flex-col gap-8 mx-auto pt-32">
     <section class="rounded-xl flex gap-20">
-      <div class="flex flex-col gap-8">
+      <!-- <div class="flex flex-col gap-8">
         <div class="w-40 h-40 rounded-full shadow-lg">
           <img
             src="~/assets/media/rocket.png"
@@ -41,25 +38,30 @@
             class="rounded-full shadow-lg w-full h-full"
           />
         </div>
-      </div>
+      </div> -->
 
       <div>
+        <h1 class="mb-20 uppercase tracking-wider inline-block text-lg">
+          Badi
+        </h1>
         <h2 class="text-6xl mb-10">
-          Ein Ort, an dem Tradition und zeitloses Design auf moderne Innovation
-          treffen
+          Die Lettebadi ist seit den 1950er-Jahren eine der beliebtesten
+          Badeanstalten der Stadt.
         </h2>
         <p class="text-2xl mb-5">
-          Seit den 1950er Jahren ist die Lettebadi ein fester Bestandteil der
-          Zürcher Freibadkultur.
+          Doch sie ist weit mehr als nur ein Flussbad: Sie ist eine
+          architektonische Ikone, die sowohl von den Zürcherinnen und Zürchern
+          als auch von auswärtigen Besucher*innen für ihren einzigartigen
+          Charme, ihre zentrale Lage und ihre kulturelle Bedeutung geschätzt
+          wird.
         </p>
 
         <p class="text-2xl">
-          Unser neues Konzept verbindet historische Wurzeln mit nachhaltiger
-          Gastronomie: Mit frischen, regionalen Bio-Produkten und einem modernen
-          Ambiente möchten wir unseren Gästen ein authentisches und
-          zukunftsweisendes Erlebnis bieten. Entdecken Sie bei uns
-          Gastfreundschaft, Qualität und die besondere Geschichte eines wahren
-          Wahrzeichens Zürichs.
+          Seit den 1950er Jahren ziert das Flussbad Oberer Letten den
+          Lettenkanal im Zürcher Kreis 10 wie ein angedocktes Schiff, das vor
+          Anker liegt. Die 1952 nach den Plänen der Schweizer
+          Avantgarde-Architekten Elsa und Ernst Burckhard-Blum errichtete
+          Badeanlage ist zu einem geschätzten Wahrzeichen der Stadt geworden.
         </p>
       </div>
     </section>

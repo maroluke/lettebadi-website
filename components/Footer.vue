@@ -2,7 +2,7 @@
 
 <template>
   <div
-    id="opening-hours"
+    id="contact"
     class="flex flex-col gap-8 w-full max-w-screen-2xl mx-auto pb-40"
   >
     <section class="rounded-xl">

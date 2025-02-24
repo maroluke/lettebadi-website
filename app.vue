@@ -1,4 +1,12 @@
 <script setup lang="ts">
+import { useHead } from "@vueuse/head";
+
+useHead({
+  htmlAttrs: {
+    class: "scroll-smooth",
+  },
+});
+
 const eventData = ref<any[]>([]);
 const status = ref("loading");
 
@@ -17,7 +25,13 @@ async function fetchCalEventTypes() {
   }
 }
 
+const activeSection = ref<string | null>(null);
+
 onMounted(async () => {
+  observeSections(["about", "service", "events", "contact"], (id) => {
+    activeSection.value = id;
+  });
+
   // Await the fetch so that eventData is populated before proceeding.
   await fetchCalEventTypes();
 
@@ -74,27 +88,26 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="p-8 flex flex-col relative">
-    <div class="fixed top-0 left-0 right-0 z-10 bg-white drop-shadow px-8">
-      <section
-        class="flex items-center justify-between shrink w-full max-w-screen-2xl mx-auto"
-      >
-        <Logo class="w-40" />
-        <Nav />
+  <div class="flex flex-col relative">
+    <div class="fixed top-0 left-0 right-0 z-10 bg-white drop-shadow px-20">
+      <section class="flex items-center justify-between shrink w-full">
+        <Logo class="py-5 h-24 w-auto" />
+        <Nav :activeSection="activeSection" />
       </section>
     </div>
 
     <div
-      class="flex justify-between grow items-center w-full max-w-screen-2xl mx-auto min-h-screen"
+      id="about"
+      class="flex justify-between grow items-center w-full min-h-screen"
     >
       <AppIntro :data="eventData" :status="status" />
     </div>
 
-    <Menu />
+    <Gastronomy />
 
-    <EventTypes :data="eventData" :status="status" />
+    <Events :eventData="eventData" :status="status" />
 
-    <AboutUs />
+    <!-- <EventTypes :data="eventData" :status="status" /> -->
 
     <OpeningHours />
 

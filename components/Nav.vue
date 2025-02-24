@@ -1,31 +1,37 @@
+<script setup lang="ts">
+const props = defineProps<{
+  activeSection: string | null;
+}>();
+</script>
+
 <template>
-  <nav class="flex gap-20 font-bold text-lg">
-    <a
-      href="/"
-      class="border-b-2 border-transparent transition-all hover:border-primary hover:text-primary"
-      >Home</a
-    >
-    <a
-      href="#menu"
-      class="border-b-2 border-transparent transition-all hover:border-primary hover:text-primary"
-      >Tagesmenu</a
-    >
+  <nav class="flex gap-20 text-lg uppercase">
     <a
       href="#about"
+      :class="{ 'border-primary text-primary': activeSection === 'about' }"
       class="border-b-2 border-transparent transition-all hover:border-primary hover:text-primary"
-      >Über uns</a
+      >Badi</a
     >
-
     <a
-      href="#event-types"
+      href="#service"
+      :class="{ 'border-primary text-primary': activeSection === 'service' }"
       class="border-b-2 border-transparent transition-all hover:border-primary hover:text-primary"
-      >Vermietung</a
+      >Gastronomie</a
+    >
+    <a
+      href="#events"
+      :class="{ 'border-primary text-primary': activeSection === 'events' }"
+      class="border-b-2 border-transparent transition-all hover:border-primary hover:text-primary"
+      >Veranstaltungen</a
     >
 
     <a
       href="#opening-hours"
+      :class="{
+        'border-primary text-primary': activeSection === 'opening-hours',
+      }"
       class="border-b-2 border-transparent transition-all hover:border-primary hover:text-primary"
-      >Öffnungszeiten</a
+      >Öffnungszeiten und Kontakt</a
     >
   </nav>
 </template>

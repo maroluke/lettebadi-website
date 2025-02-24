@@ -8,15 +8,25 @@
     <section class="rounded-xl">
       <div class="flex gap-8 justify-around items-center">
         <div class="max-w-screen-sm">
+          <h1 class="mb-20 uppercase tracking-wider inline-block text-lg">
+            Öffnungszeiten und Kontakt
+          </h1>
           <h2 class="text-6xl mb-10">
-            Täglich von 10:00 bis 22:00 Uhr geöffnet
+            Täglich von 09:00 bis 22:00 Uhr geöffnet
           </h2>
 
           <div>
             <p class="text-2xl mb-5">
-              Zwischen 1. Juni und 30. September 2025 lädt Sie die Lettebadi
-              herzlich ein. Unser Team steht täglich für Sie bereit und freut
-              sich auf Ihren Besuch.
+              Bei Schlechtwetter schliesst die Badi um 14 Uhr.
+            </p>
+            <p class="text-2xl mb-5">
+              <strong>Badisaison</strong><br />Von 15. Mai bis 15. September
+              2025
+            </p>
+            <p class="text-2xl mb-5">
+              <strong>Gastro Pop-Up im Herbst</strong><br />15. September bis
+              31. Oktober.<br />
+              <a href="#" class="underline">Lesen Sie hier mehr</a>.
             </p>
           </div>
         </div>
