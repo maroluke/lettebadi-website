@@ -24,7 +24,7 @@ const layer0 = computed(() => ({
 
     <FloatingWomen1
       :style="layer0"
-      class="w-1/2 h-full text-primary z-0 transition-all duration-300 ease-out"
+      class="w-1/2 h-full text-primary z-0 transition-all duration-300 ease-out drop-shadow-light"
     />
   </div>
 </template>

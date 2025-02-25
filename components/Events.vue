@@ -82,7 +82,7 @@ const { eventData, status } = defineProps({
       </div>
 
       <div :style="layer0" class="text-primary grow flex-2 -mr-20 max-w-5xl">
-        <Social class="w-full" />
+        <Social class="w-full drop-shadow-light" />
       </div>
     </div>
   </section>

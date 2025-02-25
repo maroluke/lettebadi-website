@@ -23,7 +23,7 @@ const layer0 = computed(() => ({
         :style="layer0"
         src="~/assets/media/menu.jpg"
         alt="Tagesmenu Lettebadi"
-        class="max-w-96 rounded shadow-lg transition-all duration-300 ease-out"
+        class="max-w-96 rounded drop-shadow-light transition-all duration-300 ease-out"
       />
 
       <div class="max-w-screen-md">

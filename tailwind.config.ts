@@ -60,6 +60,12 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      dropShadow: {
+        light: [
+          "0 10px 8px rgba(0, 0, 0, 0.02)",
+          "0 4px 3px rgba(0, 0, 0, 0.01)",
+        ],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
