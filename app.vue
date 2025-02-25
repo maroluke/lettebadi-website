@@ -102,6 +102,8 @@ onMounted(async () => {
       <AppIntro :data="eventData" :status="status" />
     </div>
 
+    <UiSubscribeForm />
+
     <Gastronomy />
 
     <Events :eventData="eventData" :status="status" />

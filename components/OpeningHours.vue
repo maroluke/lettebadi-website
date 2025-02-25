@@ -32,7 +32,7 @@ const { eventData, status } = defineProps({
         <div class="max-w-screen-sm">
           <UiSectionTitle title="Öffnungszeiten und Kontakt" />
           <h2 class="text-6xl mb-10">
-            Täglich von 09:00 bis 22:00 Uhr geöffnet
+            Täglich geöffnet<br />von 09:00<br />bis 22:00 Uhr
           </h2>
 
           <div>

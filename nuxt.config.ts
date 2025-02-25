@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     calApiKey: process.env.CAL_API_KEY,
+    infomaniakApiKey: process.env.INFOMANIAK_API_KEY,
     public: {
       calApiUrl: process.env.CAL_API_URL || "https://api.cal.com/v2",
     },

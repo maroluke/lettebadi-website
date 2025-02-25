@@ -43,15 +43,15 @@
       <div>
         <UiSectionTitle title="Badi" />
         <h2 class="text-6xl mb-10">
-          Die Lettebadi ist seit den 1950er-Jahren eine der beliebtesten
-          Badeanstalten der Stadt.
+          Eine der beliebtesten Badeanstalten der Stadt
         </h2>
         <p class="text-2xl mb-5">
-          Doch sie ist weit mehr als nur ein Flussbad: Sie ist eine
-          architektonische Ikone, die sowohl von den Zürcherinnen und Zürchern
-          als auch von auswärtigen Besucher*innen für ihren einzigartigen
-          Charme, ihre zentrale Lage und ihre kulturelle Bedeutung geschätzt
-          wird.
+          Die Lettebadi ist seit den 1950er-Jahren eine der beliebtesten
+          Badeanstalten der Stadt. Doch sie ist weit mehr als nur ein Flussbad:
+          Sie ist eine architektonische Ikone, die sowohl von den Zürcherinnen
+          und Zürchern als auch von auswärtigen Besucher*innen für ihren
+          einzigartigen Charme, ihre zentrale Lage und ihre kulturelle Bedeutung
+          geschätzt wird.
         </p>
 
         <p class="text-2xl">

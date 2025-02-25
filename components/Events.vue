@@ -24,18 +24,22 @@ const { eventData, status } = defineProps({
       <div class="flex flex-col mb-10 flex-1 max-w-screen-md pl-28 pt-40">
         <UiSectionTitle title="Veranstaltungen" />
         <h2 class="text-6xl mb-10">
-          Unvergessliches Erlebnis in ungezwungener und stylischer Umgebung.
+          Unvergesslich<br />Ungezwungenen<br />Stylisch
         </h2>
         <p class="text-2xl mb-5">
-          Eine Einzigartigkeit in der Lettebadi ist der 150m2 grosse 'Flussraum'
+          Eine Einzigartigkeit der Lettebadi ist der 150m2 grosse 'Flussraum'
           der von Firmen wie auch Privaten für die unterschiedlichsten Events
           gemietet werden kann. Ob Firmenjubiläum, Seminar, Teamevent oder
           Geburtstage – in der Lettebadi lässt sich alles in ungezwungener und
           stylischer Umgebung austragen.
         </p>
-        <p class="text-2xl">
+        <p class="text-2xl mb-5">
           Dieser spezielle Ort, in Zusammenhang mit unserem einzigartigen
           Foodabgebot, wird Ihren Gästen ein unvergessliche Erlebnis bieten!
+        </p>
+        <p class="text-2xl">
+          Prüfen Sie auf unserem Eventkalender ob Ihr Wunschtermin noch
+          verfügbar ist:
         </p>
 
         <div>
@@ -49,16 +53,13 @@ const { eventData, status } = defineProps({
                 :data-cal-link="`lettebadi/${event.slug}`"
                 :data-cal-namespace="event.slug"
                 data-cal-config='{"layout": "month_view"}'
-                class="text-6xl uppercase group transition-all border-t-4 border-black pt-5 hover:text-primary hover:border-primary"
+                class="flex justify-between w-full text-6xl uppercase group transition-all border-t-4 border-black pt-5 hover:text-primary hover:border-primary"
               >
-                {{ event.title }}
+                <p class="grow">{{ event.title }}</p>
 
                 <button
-                  class="font-bold text-lg text-start min-w-52 flex justify-between items-center w-full"
+                  class="font-bold text-lg text-start flex justify-between items-center shrink"
                 >
-                  <p class="whitespace-nowrap uppercase">
-                    Verfügbarkeit prüfen
-                  </p>
                   <MoveRight
                     class="w-6 h-6 opacity-0 duration-300 -translate-x-4 transition-all group-hover:opacity-100 group-hover:translate-x-0"
                   ></MoveRight>

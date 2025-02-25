@@ -28,7 +28,7 @@ const layer0 = computed(() => ({
 
       <div class="max-w-screen-md">
         <UiSectionTitle title="Gastronomie" />
-        <h2 class="text-6xl mb-10">Nachhaltig, saisonal und regional.</h2>
+        <h2 class="text-6xl mb-10">Nachhaltig<br />Saisonal<br />Regional</h2>
 
         <p class="text-2xl mb-5">
           Ab dieser Saison wird das gesamte Food- und Beverage-Angebot in der

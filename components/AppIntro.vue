@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useParallax, useScroll } from "@vueuse/core";
 
+// Parallax
 const target = ref<HTMLElement | null>(null);
 const parallax = reactive(useParallax(target));
 const { y } = useScroll(window);
