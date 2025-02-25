@@ -2,7 +2,7 @@ import { defineEventHandler, readBody } from "h3";
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
-  const apiKey = config.public.infomaniakApiKey;
+  const apiKey = config.infomaniakApiKey;
   const domain = "52458";
 
   const body = await readBody(event);
