@@ -1,5 +1,16 @@
 <script setup lang="ts">
-import { MoveRight, MoveDown } from "lucide-vue-next";
+import { MoveRight } from "lucide-vue-next";
+import { useParallax, useScroll } from "@vueuse/core";
+
+const target = ref<HTMLElement | null>(null);
+const parallax = reactive(useParallax(target));
+const { y } = useScroll(window);
+
+const layer0 = computed(() => ({
+  transform: `translateX(${
+    y.value * -0.04 + parallax.tilt * -20
+  }px) translateY(${y.value * 0.05 + parallax.roll * 10}px) scale(1)`,
+}));
 
 const { eventData, status } = defineProps({
   eventData: Array,
@@ -8,12 +19,10 @@ const { eventData, status } = defineProps({
 </script>
 
 <template>
-  <section id="events" class="rounded-xl flex flex-col gap-10 overflow-hidden">
+  <section ref="target" id="events" class="rounded-xl flex flex-col gap-10">
     <div class="flex justify-between items-center gap-40">
       <div class="flex flex-col mb-10 flex-1 max-w-screen-md pl-28 pt-40">
-        <h1 class="mb-20 uppercase tracking-wider inline-block text-lg">
-          Veranstaltungen
-        </h1>
+        <UiSectionTitle title="Veranstaltungen" />
         <h2 class="text-6xl mb-10">
           Unvergessliches Erlebnis in ungezwungener und stylischer Umgebung.
         </h2>
@@ -67,29 +76,11 @@ const { eventData, status } = defineProps({
                 class="h-4 bg-black min-w-52 flex justify-between items-center"
               ></button>
             </div>
-
-            <div
-              class="relative flex flex-col gap-2 border-t-4 border-black pt-10 mt-10 w-full opacity-25 animate-pulse"
-            >
-              <div class="w-40 h-4 bg-black"></div>
-              <button
-                class="h-4 bg-black min-w-52 flex justify-between items-center"
-              ></button>
-            </div>
-
-            <div
-              class="relative flex flex-col gap-2 border-t-4 border-black pt-10 mt-10 w-full opacity-25 animate-pulse"
-            >
-              <div class="w-40 h-4 bg-black"></div>
-              <button
-                class="h-4 bg-black min-w-52 flex justify-between items-center"
-              ></button>
-            </div>
           </template>
         </div>
       </div>
 
-      <div class="text-primary grow flex-2 -mr-20 max-w-5xl">
+      <div :style="layer0" class="text-primary grow flex-2 -mr-20 max-w-5xl">
         <Social class="w-full" />
       </div>
     </div>

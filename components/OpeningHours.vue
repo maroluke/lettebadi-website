@@ -1,20 +1,36 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useParallax, useScroll } from "@vueuse/core";
+
+const target = ref<HTMLElement | null>(null);
+const parallax = reactive(useParallax(target));
+const { y } = useScroll(window);
+
+const layer0 = computed(() => ({
+  transform: `translateX(${parallax.tilt * -20}px) translateY(${
+    parallax.roll * 10
+  }px) scale(1) rotate(${y.value * 0.1}deg)`,
+}));
+
+const { eventData, status } = defineProps({
+  eventData: Array,
+  status: String,
+});
+</script>
 
 <template>
   <div
+    ref="target"
     id="opening-hours"
     class="flex flex-col gap-8 w-full max-w-screen-2xl mx-auto pt-40"
   >
     <section class="rounded-xl">
       <div class="flex gap-8 justify-around items-center">
-        <div class="grow text-primary pr-20">
+        <div :style="layer0" class="grow text-primary pr-20">
           <FloatingWomen2 class="w-full h-full" />
         </div>
 
         <div class="max-w-screen-sm">
-          <h1 class="mb-20 uppercase tracking-wider inline-block text-lg">
-            Öffnungszeiten und Kontakt
-          </h1>
+          <UiSectionTitle title="Öffnungszeiten und Kontakt" />
           <h2 class="text-6xl mb-10">
             Täglich von 09:00 bis 22:00 Uhr geöffnet
           </h2>

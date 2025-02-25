@@ -41,9 +41,7 @@
       </div> -->
 
       <div>
-        <h1 class="mb-20 uppercase tracking-wider inline-block text-lg">
-          Badi
-        </h1>
+        <UiSectionTitle title="Badi" />
         <h2 class="text-6xl mb-10">
           Die Lettebadi ist seit den 1950er-Jahren eine der beliebtesten
           Badeanstalten der Stadt.

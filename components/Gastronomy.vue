@@ -1,18 +1,33 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useParallax, useScroll } from "@vueuse/core";
+
+const target = ref<HTMLElement | null>(null);
+const parallax = reactive(useParallax(target));
+const { y } = useScroll(window);
+
+const layer0 = computed(() => ({
+  transform: `translateX(${parallax.tilt * -5}px) translateY(${
+    y.value * -0.05 + parallax.roll * -5
+  }px) scale(1)`,
+}));
+</script>
 
 <template>
-  <div id="service" class="mx-auto pt-32">
+  <div
+    ref="target"
+    id="service"
+    class="mx-auto pt-32 transition-all duration-300 ease-out"
+  >
     <section class="flex gap-20 items-center">
       <img
+        :style="layer0"
         src="~/assets/media/menu.jpg"
         alt="Tagesmenu Lettebadi"
-        class="max-w-96 rounded shadow-lg"
+        class="max-w-96 rounded shadow-lg transition-all duration-300 ease-out"
       />
 
       <div class="max-w-screen-md">
-        <h1 class="mb-20 uppercase tracking-wider inline-block text-lg">
-          Gastronomie
-        </h1>
+        <UiSectionTitle title="Gastronomie" />
         <h2 class="text-6xl mb-10">Nachhaltig, saisonal und regional.</h2>
 
         <p class="text-2xl mb-5">
