@@ -25,7 +25,7 @@ const { eventData, status } = defineProps({
   >
     <section class="rounded-xl">
       <div class="flex gap-8 justify-around items-center">
-        <div :style="layer0" class="grow text-primary pr-20">
+        <div :style="layer0" class="grow text-primary p-20">
           <FloatingWomen2 class="w-full h-full drop-shadow-light" />
         </div>
 
