@@ -10,9 +10,10 @@ const props = defineProps<{
   <a
     :href="`#${id}`"
     :class="{
-      'border-b-2 border-primary text-primary': active,
+      'border-b-[3px] border-black cursor-default hover:!border-black hover:!text-black':
+        active,
     }"
-    class="transition-all hover:border-b-2 hover:border-primary hover:text-primary"
+    class="transition-all hover:border-b-[3px] hover:border-primary hover:text-primary"
     >{{ label }}</a
   >
 </template>
