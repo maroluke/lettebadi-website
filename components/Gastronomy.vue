@@ -45,7 +45,7 @@ onUnmounted(() => {
   <div
     ref="target"
     id="service"
-    class="mx-auto transition-all duration-300 ease-out xl:pt-32"
+    class="mx-auto transition-all duration-300 ease-out 2xl:pt-32"
   >
     <section
       class="relative flex flex-col items-center gap-20 px-4 xl:flex-row xl:px-0"

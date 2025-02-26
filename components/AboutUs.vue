@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="mx-auto flex flex-col gap-8 pt-32">
+  <div class="mx-auto flex flex-col gap-8 py-32">
     <section class="flex gap-20 rounded-xl">
       <div>
         <UiSectionTitle title="Badi" />

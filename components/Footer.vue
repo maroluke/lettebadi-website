@@ -17,7 +17,7 @@
 
             <p class="mb-5 text-2xl">
               <strong>E-Mail:</strong>
-              <a href="mailto:joachim@lettebadi.ch">joachim@lettebadi.ch</a>
+              <a href="mailto:joachim@lettebadi.ch"> gastro@lettebadi.ch</a>
             </p>
 
             <p class="mb-5 flex flex-col gap-4 text-2xl xl:gap-1">
