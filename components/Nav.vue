@@ -3,8 +3,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from './shadcn/ui/dropdown-menu/';
 import { Waves } from 'lucide-vue-next';
