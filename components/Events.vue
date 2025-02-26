@@ -68,7 +68,7 @@ onUnmounted(() => {
         </p>
         <p class="mb-5 text-2xl">
           Dieser spezielle Ort, in Zusammenhang mit unserem einzigartigen
-          Foodabgebot, wird Ihren Gästen ein unvergessliche Erlebnis bieten!
+          Foodangebot, wird Ihren Gästen ein unvergessliche Erlebnis bieten!
         </p>
         <p class="text-2xl">
           Prüfen Sie auf unserem Eventkalender ob Ihr Wunschtermin noch
