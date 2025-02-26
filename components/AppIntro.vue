@@ -32,7 +32,7 @@ onMounted(() => {
   xyValue.value = isPhoneScreen.value ? 0.0 : 0.0;
   xTilt.value = isPhoneScreen.value ? 10 : 20;
   yyValue.value = isPhoneScreen.value ? 0.1 : 0.3;
-  yRoll.value = isPhoneScreen.value ? 20 : 0;
+  yRoll.value = isPhoneScreen.value ? yyValue.value : 0;
 });
 
 onUnmounted(() => {
@@ -55,7 +55,7 @@ onUnmounted(() => {
     <div class="relative h-96 w-full xl:h-auto xl:w-1/2">
       <FloatingWomen1
         :style="layer0"
-        class="absolute -top-20 z-0 h-full w-full text-primary drop-shadow-light transition-all duration-300 ease-out xl:relative xl:-top-0"
+        class="absolute -top-40 z-0 h-full w-full text-primary drop-shadow-light transition-all duration-300 ease-out xl:relative xl:-top-0"
       />
     </div>
   </div>
