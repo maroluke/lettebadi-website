@@ -54,7 +54,7 @@ onUnmounted(() => {
         :style="layer0"
         src="~/assets/media/menu.jpg"
         alt="Tagesmenu Lettebadi"
-        class="absolute -right-10 top-0 z-10 order-2 w-36 rounded drop-shadow-light transition-all duration-300 ease-out 2xl:relative 2xl:order-1 2xl:w-auto 2xl:max-w-96"
+        class="absolute -right-10 top-0 z-10 order-2 hidden w-36 rounded drop-shadow-light transition-all duration-300 ease-out 2xl:relative 2xl:order-1 2xl:block 2xl:w-auto 2xl:max-w-96"
       />
 
       <div class="z-20 order-1 max-w-screen-md 2xl:order-2">
