@@ -13,7 +13,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <nav class="hidden gap-20 text-2xl 2xl:flex">
+  <nav class="hidden gap-20 text-2xl xl:flex">
     <NavLink :active="activeSection === 'about'" :id="'about'" :label="Badi" />
     <NavLink
       :active="activeSection === 'service'"
@@ -32,7 +32,7 @@ const props = defineProps<{
     />
   </nav>
 
-  <div class="flex items-center 2xl:hidden">
+  <div class="flex items-center xl:hidden">
     <DropdownMenu>
       <DropdownMenuTrigger><Waves /></DropdownMenuTrigger>
       <DropdownMenuContent class="p-0">

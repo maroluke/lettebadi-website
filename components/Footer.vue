@@ -20,7 +20,7 @@
               <a href="mailto:joachim@lettebadi.ch">joachim@lettebadi.ch</a>
             </p>
 
-            <p class="mb-5 flex flex-col gap-4 text-2xl 2xl:gap-1">
+            <p class="mb-5 flex flex-col gap-4 text-2xl xl:gap-1">
               <RouterLink to="/agb">
                 <UiButton label="AGB" class="text-sm font-normal opacity-50" />
               </RouterLink>

@@ -43,7 +43,7 @@ const subscribe = async () => {
 
     <div
       v-if="subscriptionVisible"
-      class="flex flex-col justify-between gap-5 2xl:flex-row"
+      class="flex flex-col justify-between gap-5 xl:flex-row"
     >
       <Input
         v-model="email"

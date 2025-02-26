@@ -45,19 +45,19 @@ onUnmounted(() => {
   <div
     ref="target"
     id="service"
-    class="mx-auto transition-all duration-300 ease-out 2xl:pt-32"
+    class="mx-auto transition-all duration-300 ease-out xl:pt-32"
   >
     <section
-      class="relative flex flex-col items-center gap-20 px-4 2xl:flex-row 2xl:px-0"
+      class="relative flex flex-col items-center gap-20 px-4 xl:flex-row xl:px-0"
     >
       <img
         :style="layer0"
         src="~/assets/media/menu.jpg"
         alt="Tagesmenu Lettebadi"
-        class="absolute -right-10 top-0 z-10 order-2 hidden w-36 rounded drop-shadow-light transition-all duration-300 ease-out 2xl:relative 2xl:order-1 2xl:block 2xl:w-auto 2xl:max-w-96"
+        class="absolute -right-10 top-0 z-10 order-2 hidden w-36 rounded drop-shadow-light transition-all duration-300 ease-out xl:relative xl:order-1 xl:block xl:w-auto xl:max-w-96"
       />
 
-      <div class="z-20 order-1 max-w-screen-md 2xl:order-2">
+      <div class="z-20 order-1 max-w-screen-md xl:order-2">
         <UiSectionTitle title="Gastronomie" />
 
         <UiMainTitle title="Nachhaltig<br />Saisonal<br />Regional" />

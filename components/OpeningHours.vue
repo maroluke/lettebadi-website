@@ -20,15 +20,20 @@ const { eventData, status } = defineProps({
 <template>
   <div
     ref="target"
-    class="mx-auto flex w-full max-w-screen-2xl flex-col gap-8 2xl:pt-40"
+    class="mx-auto flex w-full max-w-screen-xl flex-col gap-8 xl:pt-40"
   >
     <section class="rounded-xl">
-      <div class="flex flex-col items-center justify-around gap-8 2xl:flex-row">
-        <div :style="layer0" class="grow text-primary 2xl:p-20">
+      <div
+        class="flex flex-col gap-8 sm:items-center xl:flex-row xl:justify-around"
+      >
+        <div
+          :style="layer0"
+          class="max-w-md grow text-primary sm:p-20 xl:max-w-none"
+        >
           <FloatingWomen2 class="h-full w-full drop-shadow-light" />
         </div>
 
-        <div id="opening-hours" class="max-w-screen-sm px-4 2xl:p-0">
+        <div id="opening-hours" class="px-4 xl:max-w-screen-sm xl:p-0">
           <UiSectionTitle title="Öffnungszeiten und Kontakt" />
 
           <UiMainTitle

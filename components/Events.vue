@@ -51,11 +51,11 @@ onUnmounted(() => {
 <template>
   <section ref="target" class="flex flex-col gap-10">
     <div
-      class="flex flex-col items-center justify-between gap-10 2xl:flex-row 2xl:gap-40"
+      class="mx-auto flex w-full max-w-screen-2xl flex-col items-center justify-between gap-10 xl:flex-row xl:gap-40"
     >
       <div
         id="events"
-        class="order-2 mb-10 flex max-w-screen-md flex-col px-4 2xl:order-1 2xl:flex-1 2xl:pl-28 2xl:pr-0 2xl:pt-40"
+        class="order-2 mb-10 flex max-w-screen-md flex-col px-4 xl:order-1 xl:pl-28 xl:pr-0 xl:pt-40"
       >
         <UiSectionTitle title="Veranstaltungen" />
         <UiMainTitle title="Ihr Anlass in der Badi" />
@@ -86,7 +86,7 @@ onUnmounted(() => {
                 :data-cal-link="`lettebadi/${event.slug}`"
                 :data-cal-namespace="event.slug"
                 data-cal-config='{"layout": "month_view"}'
-                class="group w-full border-t-4 border-black pt-5 text-4xl uppercase transition-all hover:border-primary hover:text-primary 2xl:text-6xl"
+                class="group w-full border-t-4 border-black pt-5 text-4xl uppercase transition-all hover:border-primary hover:text-primary xl:text-6xl"
               >
                 <p class="grow">{{ event.title }}</p>
 
@@ -119,7 +119,7 @@ onUnmounted(() => {
 
       <div
         :style="layer0"
-        class="order-1 -mr-36 w-full grow text-primary 2xl:order-2 2xl:-mr-20 2xl:max-w-5xl"
+        class="order-1 -mr-36 w-full max-w-lg grow text-primary xl:order-2 xl:-mr-20 xl:max-w-5xl"
       >
         <Social class="w-full drop-shadow-light" />
       </div>
