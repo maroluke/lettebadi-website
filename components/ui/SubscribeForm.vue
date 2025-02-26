@@ -50,7 +50,7 @@ const subscribe = async () => {
         v-model="email"
         type="email"
         placeholder="Ihre E-Mail Adresse"
-        class="h-14 grow basis-2 text-2xl leading-[3.5rem] transition-all duration-300 ease-out"
+        class="h-[3.5rem] text-2xl transition-all duration-300 ease-out xl:grow xl:basis-2"
       />
       <div
         class="flex w-full min-w-52 shrink basis-1 flex-col items-center transition-all duration-300 ease-out"
