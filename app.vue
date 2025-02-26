@@ -89,9 +89,9 @@ onMounted(async () => {
 
 <template>
   <div class="flex flex-col relative overflow-hidden">
-    <div class="fixed top-0 left-0 right-0 z-50 p-8">
+    <div class="fixed top-0 left-0 right-0 z-50 2xl:p-8">
       <section
-        class="bg-white drop-shadow-2xl rounded flex px-20 items-center justify-between shrink w-full"
+        class="bg-white drop-shadow-lg rounded flex items-center justify-between shrink w-full px-8 2xl:px-20 2xl:drop-shadow-2xl"
       >
         <Logo class="py-5 w-36" />
         <Nav :activeSection="activeSection" />

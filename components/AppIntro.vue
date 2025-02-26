@@ -16,7 +16,7 @@ const layer0 = computed(() => ({
 <template>
   <div
     ref="target"
-    class="flex justify-between items-center w-full min-h-screen max-w-screen-3xl px-28 relative transition-all duration-300 ease-out"
+    class="flex justify-between items-center w-full min-h-screen max-w-screen-3xl relative transition-all duration-300 ease-out px-4 2xl:px-28"
   >
     <div class="w-1/2 mx-auto z-20">
       <AboutUs />
