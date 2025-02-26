@@ -1,36 +1,68 @@
 <script setup lang="ts">
-import { useParallax, useScroll } from "@vueuse/core";
+import { UiMainTitle } from '#components';
+import { useParallax, useScroll } from '@vueuse/core';
 
 const target = ref<HTMLElement | null>(null);
 const parallax = reactive(useParallax(target));
 const { y } = useScroll(window);
+const isPhoneScreen = ref(false);
+
+const xValue = ref(0);
+const yValue = ref(0);
+const yValueRoll = ref(0);
 
 const layer0 = computed(() => ({
-  transform: `translateX(${parallax.tilt * -5}px) translateY(${
-    y.value * -0.05 + parallax.roll * -5
+  transform: `translateX(${parallax.tilt * xValue.value}px) translateY(${
+    y.value * yValue.value + parallax.roll * yValueRoll.value
   }px) scale(1)`,
 }));
+
+// Check if device has a phone screen size
+const checkPhoneScreen = () => {
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+  isPhoneScreen.value = mediaQuery.matches;
+  mediaQuery.addEventListener('change', (e) => {
+    isPhoneScreen.value = e.matches;
+  });
+};
+
+onMounted(() => {
+  checkPhoneScreen();
+  xValue.value = -5;
+  yValue.value = -0.075;
+  yValueRoll.value = -50;
+});
+
+onUnmounted(() => {
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+  mediaQuery.removeEventListener('change', (e) => {
+    isPhoneScreen.value = e.matches;
+  });
+});
 </script>
 
 <template>
   <div
     ref="target"
     id="service"
-    class="mx-auto pt-32 transition-all duration-300 ease-out"
+    class="mx-auto pt-10 transition-all duration-300 ease-out 2xl:pt-32"
   >
-    <section class="flex gap-20 items-center">
+    <section
+      class="relative flex flex-col items-center gap-20 px-4 2xl:flex-row 2xl:px-0"
+    >
       <img
         :style="layer0"
         src="~/assets/media/menu.jpg"
         alt="Tagesmenu Lettebadi"
-        class="max-w-96 rounded drop-shadow-light transition-all duration-300 ease-out"
+        class="absolute right-10 top-0 z-10 order-2 w-32 rounded drop-shadow-light transition-all duration-300 ease-out 2xl:relative 2xl:order-1 2xl:w-auto 2xl:max-w-96"
       />
 
-      <div class="max-w-screen-md">
+      <div class="z-20 order-1 max-w-screen-md 2xl:order-2">
         <UiSectionTitle title="Gastronomie" />
-        <h2 class="text-6xl mb-10">Nachhaltig<br />Saisonal<br />Regional</h2>
 
-        <p class="text-2xl mb-5">
+        <UiMainTitle title="Nachhaltig<br />Saisonal<br />Regional" />
+
+        <p class="mb-5 text-2xl">
           Ab dieser Saison wird das gesamte Food- und Beverage-Angebot in der
           Lettebadi auf Bio umgestellt. Dieser Schritt ist nicht nur Ausdruck
           eines nachhaltigen Denkens, sondern auch eine bewusste Abgrenzung vom

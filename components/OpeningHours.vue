@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useParallax, useScroll } from "@vueuse/core";
+import { useParallax, useScroll } from '@vueuse/core';
 
 const target = ref<HTMLElement | null>(null);
 const parallax = reactive(useParallax(target));
@@ -21,29 +21,30 @@ const { eventData, status } = defineProps({
   <div
     ref="target"
     id="opening-hours"
-    class="flex flex-col gap-8 w-full max-w-screen-2xl mx-auto pt-40"
+    class="mx-auto flex w-full max-w-screen-2xl flex-col gap-8 pt-40"
   >
     <section class="rounded-xl">
-      <div class="flex gap-8 justify-around items-center">
-        <div :style="layer0" class="grow text-primary p-20">
-          <FloatingWomen2 class="w-full h-full drop-shadow-light" />
+      <div class="flex items-center justify-around gap-8">
+        <div :style="layer0" class="grow p-20 text-primary">
+          <FloatingWomen2 class="h-full w-full drop-shadow-light" />
         </div>
 
         <div class="max-w-screen-sm">
           <UiSectionTitle title="Öffnungszeiten und Kontakt" />
-          <h2 class="text-6xl mb-10">
-            Täglich geöffnet<br />von 09:00<br />bis 22:00 Uhr
-          </h2>
+
+          <UiMainTitle
+            title="Täglich geöffnet<br />von 09:00<br />bis 22:00 Uhr"
+          />
 
           <div>
-            <p class="text-2xl mb-5">
+            <p class="mb-5 text-2xl">
               Bei Schlechtwetter schliesst die Badi um 14 Uhr.
             </p>
-            <p class="text-2xl mb-5">
+            <p class="mb-5 text-2xl">
               <strong>Badisaison</strong><br />Von 15. Mai bis 15. September
               2025
             </p>
-            <p class="text-2xl mb-5">
+            <p class="mb-5 text-2xl">
               <strong>Gastro Pop-Up im Herbst</strong><br />15. September bis
               31. Oktober.<br />
               <a href="#" class="underline">Lesen Sie hier mehr</a>.

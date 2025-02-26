@@ -5,7 +5,9 @@ const props = defineProps({
 </script>
 
 <template>
-  <h1 class="mb-20 uppercase tracking-wider inline-block text-2xl font-light">
+  <h1
+    class="mb-4 inline-block text-2xl font-light uppercase tracking-wider 2xl:mb-20"
+  >
     {{ title }}
   </h1>
 </template>

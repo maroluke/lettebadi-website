@@ -1,34 +1,32 @@
 <script setup lang="ts">
-import { useHead } from "@vueuse/head";
+import { useHead } from '@vueuse/head';
 
 useHead({
   htmlAttrs: {
-    class: "scroll-smooth",
+    class: 'scroll-smooth',
   },
 });
 
 const eventData = ref<any[]>([]);
-const status = ref("loading");
+const status = ref('loading');
 
 async function fetchCalEventTypes() {
   try {
     // Call your own server endpoint to fetch the event types.
-    const data = await $fetch("/api/eventTypes");
-
-    console.log("Fetched data:", data);
+    const data = await $fetch('/api/eventTypes');
 
     eventData.value = (data.data as any[]).reverse();
   } catch (error) {
-    console.error("Error fetching:", error);
+    console.error('Error fetching:', error);
   } finally {
-    status.value = "loaded";
+    status.value = 'loaded';
   }
 }
 
 const activeSection = ref<string | null>(null);
 
 onMounted(async () => {
-  observeSections(["about", "service", "events", "opening-hours"], (id) => {
+  observeSections(['about', 'service', 'events', 'opening-hours'], (id) => {
     activeSection.value = id;
   });
 
@@ -36,8 +34,8 @@ onMounted(async () => {
   await fetchCalEventTypes();
 
   // Create a <script> element to inject the Cal.com embed code.
-  const script = document.createElement("script");
-  script.type = "text/javascript";
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
 
   // Build the initialization script for all event types.
   // The embed code is adapted from Cal.com's documentation.
@@ -88,12 +86,12 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="flex flex-col relative overflow-hidden">
-    <div class="fixed top-0 left-0 right-0 z-50 2xl:p-8">
+  <div class="relative flex flex-col overflow-hidden">
+    <div class="fixed left-0 right-0 top-0 z-50 2xl:p-8">
       <section
-        class="bg-white drop-shadow-lg rounded flex items-center justify-between shrink w-full px-8 2xl:px-20 2xl:drop-shadow-2xl"
+        class="flex w-full shrink items-center justify-between rounded bg-white px-4 drop-shadow-lg 2xl:px-20 2xl:drop-shadow-2xl"
       >
-        <Logo class="py-5 w-36" />
+        <Logo class="w-36 py-5" />
         <Nav :activeSection="activeSection" />
       </section>
     </div>
@@ -114,7 +112,7 @@ onMounted(async () => {
   </div>
 
   <section
-    class="fixed -z-10 top-0 bottom-0 left-0 right-0 w-screen h-screen text-primary"
+    class="fixed bottom-0 left-0 right-0 top-0 -z-10 h-screen w-screen text-primary"
   >
     <WavesBg />
   </section>

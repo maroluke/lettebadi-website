@@ -1,51 +1,12 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="flex flex-col gap-8 mx-auto pt-32">
-    <section class="rounded-xl flex gap-20">
-      <!-- <div class="flex flex-col gap-8">
-        <div class="w-40 h-40 rounded-full shadow-lg">
-          <img
-            src="~/assets/media/rocket.png"
-            alt="Moods Lettebadi"
-            class="rounded-full shadow-lg w-full h-full"
-          />
-        </div>
-        <div
-          class="w-60 h-60 rounded-full shadow-lg -translate-x-56 -translate-y-16"
-        >
-          <img
-            src="~/assets/media/boat.jpg"
-            alt="Moods Lettebadi"
-            class="rounded-full shadow-lg w-full h-full"
-          />
-        </div>
-        <div
-          class="w-40 h-40 rounded-full shadow-lg translate-x-10 -translate-y-60"
-        >
-          <img
-            src="~/assets/media/rivella.png"
-            alt="Moods Lettebadi"
-            class="rounded-full shadow-lg w-full h-full"
-          />
-        </div>
-        <div
-          class="w-40 h-40 rounded-full shadow-lg -translate-x-40 -translate-y-60"
-        >
-          <img
-            src="~/assets/media/chair.png"
-            alt="Moods Lettebadi"
-            class="rounded-full shadow-lg w-full h-full"
-          />
-        </div>
-      </div> -->
-
+  <div class="mx-auto flex flex-col gap-8 pt-32">
+    <section class="flex gap-20 rounded-xl">
       <div>
         <UiSectionTitle title="Badi" />
-        <h2 class="text-6xl mb-10">
-          Eine der beliebtesten Badeanstalten der Stadt
-        </h2>
-        <p class="text-2xl mb-5">
+        <UiMainTitle title="Eine der beliebtesten Badeanstalten der Stadt" />
+        <p class="mb-5 text-2xl">
           Die Lettebadi ist seit den 1950er-Jahren eine der beliebtesten
           Badeanstalten der Stadt. Doch sie ist weit mehr als nur ein Flussbad:
           Sie ist eine architektonische Ikone, die sowohl von den Zürcherinnen

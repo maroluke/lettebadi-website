@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { MoveRight } from "lucide-vue-next";
-import { useParallax, useScroll } from "@vueuse/core";
+import { MoveRight } from 'lucide-vue-next';
+import { useParallax, useScroll } from '@vueuse/core';
 
 const target = ref<HTMLElement | null>(null);
 const parallax = reactive(useParallax(target));
@@ -19,19 +19,19 @@ const { eventData, status } = defineProps({
 </script>
 
 <template>
-  <section ref="target" id="events" class="rounded-xl flex flex-col gap-10">
-    <div class="flex justify-between items-center gap-40">
-      <div class="flex flex-col mb-10 flex-1 max-w-screen-md pl-28 pt-40">
+  <section ref="target" id="events" class="flex flex-col gap-10 rounded-xl">
+    <div class="flex items-center justify-between gap-40">
+      <div class="mb-10 flex max-w-screen-md flex-1 flex-col pl-28 pt-40">
         <UiSectionTitle title="Veranstaltungen" />
-        <h2 class="text-6xl mb-10">Ihr Anlass in der Badi</h2>
-        <p class="text-2xl mb-5">
+        <UiMainTitle title="Ihr Anlass in der Badi" />
+        <p class="mb-5 text-2xl">
           Eine Einzigartigkeit der Lettebadi ist der 150m2 grosse 'Flussraum'
           der von Firmen wie auch Privaten für die unterschiedlichsten Events
           gemietet werden kann. Ob Firmenjubiläum, Seminar, Teamevent oder
           Geburtstage – in der Lettebadi lässt sich alles in ungezwungener und
           stylischer Umgebung austragen.
         </p>
-        <p class="text-2xl mb-5">
+        <p class="mb-5 text-2xl">
           Dieser spezielle Ort, in Zusammenhang mit unserem einzigartigen
           Foodabgebot, wird Ihren Gästen ein unvergessliche Erlebnis bieten!
         </p>
@@ -45,24 +45,24 @@ const { eventData, status } = defineProps({
             <div
               v-for="event in eventData"
               :key="event.id"
-              class="cursor-pointer relative font-bold text-2xl flex flex-col gap-2 mt-20 w-full"
+              class="relative mt-20 flex w-full cursor-pointer flex-col gap-2 text-2xl font-bold"
             >
               <div
                 :data-cal-link="`lettebadi/${event.slug}`"
                 :data-cal-namespace="event.slug"
                 data-cal-config='{"layout": "month_view"}'
-                class="w-full text-6xl uppercase group transition-all border-t-4 border-black pt-5 hover:text-primary hover:border-primary"
+                class="group w-full border-t-4 border-black pt-5 text-6xl uppercase transition-all hover:border-primary hover:text-primary"
               >
                 <p class="grow">{{ event.title }}</p>
 
                 <button
-                  class="font-bold text-lg text-start flex justify-between w-full items-center"
+                  class="flex w-full items-center justify-between text-start text-lg font-bold"
                 >
-                  <span class="text-2xl uppercase font-normal"
+                  <span class="text-2xl font-normal uppercase"
                     >Jetzt Verfügbarkeit prüfen</span
                   >
                   <MoveRight
-                    class="w-6 h-6 opacity-0 duration-300 -translate-x-4 transition-all group-hover:opacity-100 group-hover:translate-x-0"
+                    class="h-6 w-6 -translate-x-4 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                   ></MoveRight>
                 </button>
               </div>
@@ -71,18 +71,18 @@ const { eventData, status } = defineProps({
 
           <template v-else>
             <div
-              class="relative flex flex-col gap-2 border-t-4 border-black pt-10 mt-10 w-full opacity-25 animate-pulse"
+              class="relative mt-10 flex w-full animate-pulse flex-col gap-2 border-t-4 border-black pt-10 opacity-25"
             >
-              <div class="w-40 h-4 bg-black"></div>
+              <div class="h-4 w-40 bg-black"></div>
               <button
-                class="h-4 bg-black min-w-52 flex justify-between items-center"
+                class="flex h-4 min-w-52 items-center justify-between bg-black"
               ></button>
             </div>
           </template>
         </div>
       </div>
 
-      <div :style="layer0" class="text-primary grow flex-2 -mr-20 max-w-5xl">
+      <div :style="layer0" class="flex-2 -mr-20 max-w-5xl grow text-primary">
         <Social class="w-full drop-shadow-light" />
       </div>
     </div>
