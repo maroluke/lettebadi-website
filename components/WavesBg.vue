@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="absolute top-0 left-0 z-0 w-screen h-auto"
+    class="absolute left-0 top-0 z-0 h-full w-auto 2xl:h-auto 2xl:w-screen"
     viewBox="0 0 938 1496"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

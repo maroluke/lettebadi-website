@@ -6,8 +6,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "./shadcn/ui/dropdown-menu/";
-import { Waves } from "lucide-vue-next";
+} from './shadcn/ui/dropdown-menu/';
+import { Waves } from 'lucide-vue-next';
 
 const props = defineProps<{
   activeSection: string | null;
@@ -15,22 +15,22 @@ const props = defineProps<{
 </script>
 
 <template>
-  <nav class="gap-20 text-2xl hidden 2xl:flex">
-    <NavLink :active="activeSection === 'about'" id="about" label="Badi" />
+  <nav class="hidden gap-20 text-2xl 2xl:flex">
+    <NavLink :active="activeSection === 'about'" :id="'about'" :label="Badi" />
     <NavLink
       :active="activeSection === 'service'"
-      id="service"
-      label="Gastronomie"
+      :id="'service'"
+      :label="'Gastronomie'"
     />
     <NavLink
       :active="activeSection === 'events'"
-      id="events"
-      label="Veranstaltungen"
+      :id="'events'"
+      :label="'Veranstaltungen'"
     />
     <NavLink
       :active="activeSection === 'opening-hours'"
-      id="opening-hours"
-      label="Öffnungszeiten und Kontakt"
+      :id="'opening-hours'"
+      :label="'Öffnungszeiten und Kontakt'"
     />
   </nav>
 

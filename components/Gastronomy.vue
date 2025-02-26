@@ -30,7 +30,7 @@ onMounted(() => {
   checkPhoneScreen();
   xValue.value = -5;
   yValue.value = -0.075;
-  yValueRoll.value = -50;
+  yValueRoll.value = -30;
 });
 
 onUnmounted(() => {
@@ -45,7 +45,7 @@ onUnmounted(() => {
   <div
     ref="target"
     id="service"
-    class="mx-auto pt-10 transition-all duration-300 ease-out 2xl:pt-32"
+    class="mx-auto transition-all duration-300 ease-out 2xl:pt-32"
   >
     <section
       class="relative flex flex-col items-center gap-20 px-4 2xl:flex-row 2xl:px-0"
@@ -54,7 +54,7 @@ onUnmounted(() => {
         :style="layer0"
         src="~/assets/media/menu.jpg"
         alt="Tagesmenu Lettebadi"
-        class="absolute -right-10 top-0 z-10 order-2 w-32 rounded drop-shadow-light transition-all duration-300 ease-out 2xl:relative 2xl:order-1 2xl:w-auto 2xl:max-w-96"
+        class="absolute -right-10 top-0 z-10 order-2 w-36 rounded drop-shadow-light transition-all duration-300 ease-out 2xl:relative 2xl:order-1 2xl:w-auto 2xl:max-w-96"
       />
 
       <div class="z-20 order-1 max-w-screen-md 2xl:order-2">

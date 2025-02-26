@@ -26,7 +26,7 @@ export default defineEventHandler(async (event) => {
       success: false,
       message:
         error.data?.message ||
-        'Registrierung fehlgeschlagen.<br />Wir sind für Sie da: +41 44 123 45 67',
+        'Registrierung fehlgeschlagen.<br />Wir sind für Sie da: joachim@lettebadi.ch',
     };
   }
 });

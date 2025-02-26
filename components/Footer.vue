@@ -16,9 +16,8 @@
             </p>
 
             <p class="mb-5 text-2xl">
-              <strong>Telefon:</strong> +41 44 123 45 67<br />
               <strong>E-Mail:</strong>
-              <a href="mailto:joachim@lettebadi.ch"> joachim@lettebadi.ch</a>
+              <a href="mailto:joachim@lettebadi.ch">joachim@lettebadi.ch</a>
             </p>
 
             <p class="mb-5 flex flex-col gap-4 text-2xl 2xl:gap-1">

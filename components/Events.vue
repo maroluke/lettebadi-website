@@ -49,11 +49,12 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section ref="target" id="events" class="flex flex-col gap-10">
+  <section ref="target" class="flex flex-col gap-10">
     <div
       class="flex flex-col items-center justify-between gap-10 2xl:flex-row 2xl:gap-40"
     >
       <div
+        id="events"
         class="order-2 mb-10 flex max-w-screen-md flex-col px-4 2xl:order-1 2xl:flex-1 2xl:pl-28 2xl:pr-0 2xl:pt-40"
       >
         <UiSectionTitle title="Veranstaltungen" />

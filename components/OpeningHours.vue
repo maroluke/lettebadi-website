@@ -20,7 +20,6 @@ const { eventData, status } = defineProps({
 <template>
   <div
     ref="target"
-    id="opening-hours"
     class="mx-auto flex w-full max-w-screen-2xl flex-col gap-8 2xl:pt-40"
   >
     <section class="rounded-xl">
@@ -29,7 +28,7 @@ const { eventData, status } = defineProps({
           <FloatingWomen2 class="h-full w-full drop-shadow-light" />
         </div>
 
-        <div class="max-w-screen-sm px-4 2xl:p-0">
+        <div id="opening-hours" class="max-w-screen-sm px-4 2xl:p-0">
           <UiSectionTitle title="Öffnungszeiten und Kontakt" />
 
           <UiMainTitle

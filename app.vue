@@ -91,7 +91,7 @@ onMounted(async () => {
       <section
         class="flex w-full shrink items-center justify-between rounded bg-white px-4 drop-shadow-lg 2xl:px-20 2xl:drop-shadow-2xl"
       >
-        <Logo class="w-36 py-5" />
+        <Logo class="w-24 py-2 2xl:w-36 2xl:py-5" />
         <Nav :activeSection="activeSection" />
       </section>
     </div>
@@ -112,7 +112,7 @@ onMounted(async () => {
   </div>
 
   <section
-    class="fixed bottom-0 left-0 right-0 top-0 -z-10 h-screen w-screen text-primary"
+    class="fixed bottom-0 left-0 right-0 top-0 -z-10 h-full w-screen text-primary"
   >
     <WavesBg />
   </section>
