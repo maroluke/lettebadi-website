@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Clock, HandCoins, Users } from "lucide-vue-next";
+import { Clock, HandCoins, Users } from 'lucide-vue-next';
 
 const { data, status } = defineProps({
   data: Array,
@@ -9,46 +9,46 @@ const { data, status } = defineProps({
 const dataContent = [
   {
     id: 1,
-    text: "Genießen Sie den Charme historischer Badekultur im Tageslicht – ideal für Business-Meetings, kreative Workshops oder private Feiern in einem lichtdurchfluteten Ambiente.",
-    slug: "eventraum-lettebadi-tag",
+    text: 'Genießen Sie den Charme historischer Badekultur im Tageslicht – ideal für Business-Meetings, kreative Workshops oder private Feiern in einem lichtdurchfluteten Ambiente.',
+    slug: 'eventraum-lettebadi-tag',
   },
   {
     id: 2,
-    text: "Erleben Sie stimmungsvolle Abende in einem modernisierten Raum, der Tradition und Innovation vereint – perfekt für Galas, Empfänge oder festliche Abendveranstaltungen.",
-    slug: "eventraum-lettebadi-abend",
+    text: 'Erleben Sie stimmungsvolle Abende in einem modernisierten Raum, der Tradition und Innovation vereint – perfekt für Galas, Empfänge oder festliche Abendveranstaltungen.',
+    slug: 'eventraum-lettebadi-abend',
   },
   {
     id: 3,
-    text: "Erheben Sie Ihr Event auf ein neues Level: Unser Rooftop bietet einen atemberaubenden Blick über Zürich und lädt zu stilvollen Dinner-Events und besonderen Feiern unter freiem Himmel ein.",
-    slug: "rooftop-lettebadi-abend",
+    text: 'Erheben Sie Ihr Event auf ein neues Level: Unser Rooftop bietet einen atemberaubenden Blick über Zürich und lädt zu stilvollen Dinner-Events und besonderen Feiern unter freiem Himmel ein.',
+    slug: 'rooftop-lettebadi-abend',
   },
 ];
 </script>
 
 <template>
-  <div id="event-types" class="flex flex-col gap-8 grow pb-32">
-    <section class="rounded-xl flex flex-col gap-10">
-      <div class="flex justify-end items-center gap-40">
-        <div class="flex flex-col mb-10 flex-1 max-w-screen-md">
-          <h2 class="text-6xl mb-10">
+  <div id="event-types" class="flex grow flex-col gap-8 pb-32">
+    <section class="flex flex-col gap-10 rounded-xl">
+      <div class="flex items-center justify-end gap-40">
+        <div class="mb-10 flex max-w-screen-md basis-1 flex-col">
+          <h2 class="mb-10 text-6xl">
             Willkommen zu unvergesslichen Sommer-Events in der Lettebadi!
           </h2>
-          <p class="text-2xl mb-5">
+          <p class="mb-5 text-2xl">
             Entdecken Sie zwei einzigartige Event Types, die sich über vier
             Monate im Sommer buchen lassen.
           </p>
         </div>
 
-        <div class="text-primary grow flex-2 -mr-20 max-w-5xl">
+        <div class="-mr-20 max-w-5xl grow basis-2 text-primary">
           <Social class="w-full" />
         </div>
       </div>
 
-      <ul class="text-2xl flex gap-10 max-w-screen-2xl mx-auto">
+      <ul class="mx-auto flex max-w-screen-2xl gap-10 text-2xl">
         <li
           v-for="(event, i) in data"
           :key="event.id"
-          class="border-t-4 border-black pt-5 flex-1 flex flex-col justify-between"
+          class="flex flex-1 flex-col justify-between border-t-4 border-black pt-5"
         >
           <div>
             <h3 class="mb-10 text-3xl">{{ event.title }}</h3>
@@ -58,7 +58,7 @@ const dataContent = [
             </p>
           </div>
 
-          <div class="bg-white border border-black">
+          <div class="border border-black bg-white">
             <img
               :src="`/media/event-type-${i}.jpg`"
               alt="Moods Lettebadi"

@@ -5,23 +5,57 @@ import { useParallax, useScroll } from '@vueuse/core';
 const target = ref<HTMLElement | null>(null);
 const parallax = reactive(useParallax(target));
 const { y } = useScroll(window);
+const isPhoneScreen = ref(false);
+
+const xyValue = ref(0);
+const xTilt = ref(0);
+const yyValue = ref(0);
+const yRoll = ref(0);
 
 const layer0 = computed(() => ({
   transform: `translateX(${
-    y.value * -0.04 + parallax.tilt * -20
-  }px) translateY(${y.value * 0.05 + parallax.roll * 10}px) scale(1)`,
+    y.value * xyValue.value + parallax.tilt * xTilt.value
+  }px) translateY(${y.value * yyValue.value + parallax.roll * yRoll.value}px) scale(1)`,
 }));
 
 const { eventData, status } = defineProps({
   eventData: Array,
   status: String,
 });
+
+// Check if device has a phone screen size
+const checkPhoneScreen = () => {
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+  isPhoneScreen.value = mediaQuery.matches;
+  mediaQuery.addEventListener('change', (e) => {
+    isPhoneScreen.value = e.matches;
+  });
+};
+
+onMounted(() => {
+  checkPhoneScreen();
+  xyValue.value = isPhoneScreen.value ? -0.03 : -0.05;
+  xTilt.value = isPhoneScreen.value ? 10 : 20;
+  yyValue.value = isPhoneScreen.value ? 0.0 : 0.0;
+  yRoll.value = isPhoneScreen.value ? 0 : 0;
+});
+
+onUnmounted(() => {
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+  mediaQuery.removeEventListener('change', (e) => {
+    isPhoneScreen.value = e.matches;
+  });
+});
 </script>
 
 <template>
-  <section ref="target" id="events" class="flex flex-col gap-10 rounded-xl">
-    <div class="flex items-center justify-between gap-40">
-      <div class="mb-10 flex max-w-screen-md flex-1 flex-col pl-28 pt-40">
+  <section ref="target" id="events" class="flex flex-col gap-10">
+    <div
+      class="flex flex-col items-center justify-between gap-10 2xl:flex-row 2xl:gap-40"
+    >
+      <div
+        class="order-2 mb-10 flex max-w-screen-md flex-col px-4 2xl:order-1 2xl:flex-1 2xl:pl-28 2xl:pr-0 2xl:pt-40"
+      >
         <UiSectionTitle title="Veranstaltungen" />
         <UiMainTitle title="Ihr Anlass in der Badi" />
         <p class="mb-5 text-2xl">
@@ -51,7 +85,7 @@ const { eventData, status } = defineProps({
                 :data-cal-link="`lettebadi/${event.slug}`"
                 :data-cal-namespace="event.slug"
                 data-cal-config='{"layout": "month_view"}'
-                class="group w-full border-t-4 border-black pt-5 text-6xl uppercase transition-all hover:border-primary hover:text-primary"
+                class="group w-full border-t-4 border-black pt-5 text-4xl uppercase transition-all hover:border-primary hover:text-primary 2xl:text-6xl"
               >
                 <p class="grow">{{ event.title }}</p>
 
@@ -82,7 +116,10 @@ const { eventData, status } = defineProps({
         </div>
       </div>
 
-      <div :style="layer0" class="flex-2 -mr-20 max-w-5xl grow text-primary">
+      <div
+        :style="layer0"
+        class="order-1 -mr-36 w-full grow text-primary 2xl:order-2 2xl:-mr-20 2xl:max-w-5xl"
+      >
         <Social class="w-full drop-shadow-light" />
       </div>
     </div>

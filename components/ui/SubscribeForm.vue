@@ -32,7 +32,7 @@ const subscribe = async () => {
 
 <template>
   <div
-    class="subscription-form mx-auto mb-20 mt-10 flex max-w-screen-sm flex-col p-4"
+    class="subscription-form z-20 mx-auto mb-20 mt-10 flex max-w-screen-sm flex-col p-4"
   >
     <UiMainTitle
       v-if="subscriptionVisible"
@@ -70,8 +70,10 @@ const subscribe = async () => {
     </div>
 
     <p v-if="successMessage" v-html="successMessage" class="mt-2 text-2xl"></p>
-    <p v-if="errorMessage" class="mt-2 text-2xl text-red-500">
-      {{ errorMessage }}
-    </p>
+    <p
+      v-if="errorMessage"
+      v-html="errorMessage"
+      class="mt-2 text-2xl text-red-500"
+    ></p>
   </div>
 </template>

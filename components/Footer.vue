@@ -3,40 +3,40 @@
 <template>
   <div
     id="contact"
-    class="flex flex-col gap-8 w-full max-w-screen-2xl mx-auto pt-10 pb-40"
+    class="mx-auto flex w-full max-w-screen-2xl flex-col gap-8 pb-40 pt-10"
   >
     <section class="rounded-xl">
-      <div class="flex gap-8 items-center">
+      <div class="flex items-center gap-8">
         <div class="max-w-screen-sm">
           <div>
-            <p class="text-2xl mb-5">
+            <p class="mb-5 text-2xl">
               Lettebadi GmbH<br />
               Lettensteg 10<br />
               8037 Zürich
             </p>
 
-            <p class="text-2xl mb-5">
+            <p class="mb-5 text-2xl">
               <strong>Telefon:</strong> +41 44 123 45 67<br />
               <strong>E-Mail:</strong>
               <a href="mailto:joachim@lettebadi.ch"> joachim@lettebadi.ch</a>
             </p>
 
-            <p class="text-2xl mb-5 flex flex-col gap-1">
+            <p class="mb-5 flex flex-col gap-4 text-2xl 2xl:gap-1">
+              <RouterLink to="/agb">
+                <UiButton label="AGB" class="text-sm font-normal opacity-50" />
+              </RouterLink>
+
               <RouterLink to="/impressum">
                 <UiButton
                   label="Impressum"
-                  class="opacity-50 text-sm font-normal"
+                  class="text-sm font-normal opacity-50"
                 />
-              </RouterLink>
-
-              <RouterLink to="/agb">
-                <UiButton label="AGB" class="opacity-50 text-sm font-normal" />
               </RouterLink>
 
               <RouterLink to="/privacy">
                 <UiButton
                   label="Datenschutz"
-                  class="opacity-50 text-sm font-normal"
+                  class="text-sm font-normal opacity-50"
                 />
               </RouterLink>
             </p>
