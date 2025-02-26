@@ -23,9 +23,7 @@ const { eventData, status } = defineProps({
     <div class="flex justify-between items-center gap-40">
       <div class="flex flex-col mb-10 flex-1 max-w-screen-md pl-28 pt-40">
         <UiSectionTitle title="Veranstaltungen" />
-        <h2 class="text-6xl mb-10">
-          Unvergesslich<br />Ungezwungenen<br />Stylisch
-        </h2>
+        <h2 class="text-6xl mb-10">Ihr Anlass in der Badi</h2>
         <p class="text-2xl mb-5">
           Eine Einzigartigkeit der Lettebadi ist der 150m2 grosse 'Flussraum'
           der von Firmen wie auch Privaten für die unterschiedlichsten Events
@@ -53,13 +51,16 @@ const { eventData, status } = defineProps({
                 :data-cal-link="`lettebadi/${event.slug}`"
                 :data-cal-namespace="event.slug"
                 data-cal-config='{"layout": "month_view"}'
-                class="flex justify-between w-full text-6xl uppercase group transition-all border-t-4 border-black pt-5 hover:text-primary hover:border-primary"
+                class="w-full text-6xl uppercase group transition-all border-t-4 border-black pt-5 hover:text-primary hover:border-primary"
               >
                 <p class="grow">{{ event.title }}</p>
 
                 <button
-                  class="font-bold text-lg text-start flex justify-between items-center shrink"
+                  class="font-bold text-lg text-start flex justify-between w-full items-center"
                 >
+                  <span class="text-2xl uppercase font-normal"
+                    >Jetzt Verfügbarkeit prüfen</span
+                  >
                   <MoveRight
                     class="w-6 h-6 opacity-0 duration-300 -translate-x-4 transition-all group-hover:opacity-100 group-hover:translate-x-0"
                   ></MoveRight>

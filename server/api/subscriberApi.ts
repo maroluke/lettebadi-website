@@ -9,7 +9,6 @@ export default defineEventHandler(async (event) => {
   const { email } = body;
 
   try {
-    console.log("test", apiKey);
     const response: any = await $fetch(
       `https://api.infomaniak.com/1/newsletters/${domain}/subscribers`,
       {
@@ -21,7 +20,6 @@ export default defineEventHandler(async (event) => {
         body: JSON.stringify({ email }),
       }
     );
-    console.log("response", response);
     return { success: true, data: response.data };
   } catch (error: any) {
     return {
