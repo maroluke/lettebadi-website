@@ -46,6 +46,7 @@ const imagePaths = [
           :plugins="[
             Autoplay({
               delay: 2000,
+              stopOnInteraction: false,
             }),
             Fade(),
           ]"
