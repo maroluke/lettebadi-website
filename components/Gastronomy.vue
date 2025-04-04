@@ -63,7 +63,7 @@ const imagePaths = [
               <img
                 :src="image.path"
                 :alt="image.title"
-                class="h-max w-full snap-center drop-shadow-light transition-all duration-300 ease-out xl:relative xl:order-1 xl:block xl:w-auto xl:max-w-96 xl:rounded"
+                class="w-min snap-center drop-shadow-light transition-all duration-300 ease-out xl:relative xl:order-1 xl:block xl:w-auto xl:max-w-96 xl:rounded"
             /></CarouselItem>
           </CarouselContent>
         </Carousel>
