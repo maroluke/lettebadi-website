@@ -39,9 +39,9 @@ const imagePaths = [
     class="mx-auto transition-all duration-300 ease-out 2xl:pt-32"
   >
     <section
-      class="relative flex flex-col items-center gap-20 px-4 xl:flex-row xl:px-0"
+      class="relative flex flex-col items-center gap-20 xl:flex-row xl:px-4"
     >
-      <div class="w-[384px]">
+      <div class="z-10 w-full xl:w-[384px]">
         <Carousel
           :plugins="[
             Autoplay({
@@ -55,17 +55,21 @@ const imagePaths = [
           }"
         >
           <CarouselContent>
-            <CarouselItem v-for="(image, index) in imagePaths" :key="index">
+            <CarouselItem
+              v-for="(image, index) in imagePaths"
+              :key="index"
+              class="flex max-h-[800px] items-center overflow-hidden xl:max-h-none xl:flex-none"
+            >
               <img
                 :src="image.path"
                 :alt="image.title"
-                class="w-36 rounded drop-shadow-light transition-all duration-300 ease-out xl:relative xl:order-1 xl:block xl:w-auto xl:max-w-96"
+                class="h-max w-full snap-center drop-shadow-light transition-all duration-300 ease-out xl:relative xl:order-1 xl:block xl:w-auto xl:max-w-96 xl:rounded"
             /></CarouselItem>
           </CarouselContent>
         </Carousel>
       </div>
 
-      <div class="z-20 order-1 max-w-screen-md xl:order-2">
+      <div class="z-20 order-1 max-w-screen-md px-4 xl:order-2 xl:px-0">
         <UiSectionTitle title="Gastronomie" />
 
         <UiMainTitle title="Nachhaltig<br />Saisonal<br />Regional" />
