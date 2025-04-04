@@ -41,7 +41,7 @@ const imagePaths = [
     <section
       class="relative flex flex-col items-center gap-20 xl:flex-row xl:px-4"
     >
-      <div class="z-10 w-full xl:w-[384px]">
+      <div class="z-10 hidden w-full xl:block xl:w-[384px]">
         <Carousel
           :plugins="[
             Autoplay({
@@ -72,12 +72,15 @@ const imagePaths = [
         </Carousel>
       </div>
 
-      <div class="z-20 order-1 max-w-screen-md px-4 xl:order-2 xl:px-0">
-        <UiSectionTitle title="Gastronomie" />
+      <div class="z-20 order-1 max-w-screen-md xl:order-2 xl:px-0">
+        <UiSectionTitle title="Gastronomie" class="px-4 xl:px-0" />
 
-        <UiMainTitle title="Nachhaltig<br />Saisonal<br />Regional" />
+        <UiMainTitle
+          title="Nachhaltig<br />Saisonal<br />Regional"
+          class="px-4 xl:px-0"
+        />
 
-        <p class="mb-5 text-2xl">
+        <p class="mb-5 px-4 text-2xl xl:px-0">
           Ab dieser Saison wird das gesamte Food- und Beverage-Angebot in der
           Lettebadi auf Bio umgestellt. Dieser Schritt ist nicht nur Ausdruck
           eines nachhaltigen Denkens, sondern auch eine bewusste Abgrenzung vom
@@ -86,7 +89,38 @@ const imagePaths = [
           nur machen wir sie täglich frisch, und aus Zürcher Kartoffeln!
         </p>
 
-        <p class="text-2xl">
+        <div class="z-10 my-10 w-full xl:hidden xl:w-[384px]">
+          <Carousel
+            :plugins="[
+              Autoplay({
+                delay: 2000,
+                stopOnInteraction: false,
+              }),
+              Fade(),
+            ]"
+            :opts="{
+              align: 'end',
+              loop: true,
+            }"
+          >
+            <CarouselContent>
+              <CarouselItem
+                v-for="(image, index) in imagePaths"
+                :key="index"
+                class="flex max-h-[600px] items-center overflow-hidden xl:max-h-none xl:flex-none"
+              >
+                <NuxtImg
+                  :src="image.path"
+                  :alt="image.title"
+                  class="w-min snap-center drop-shadow-light transition-all duration-300 ease-out xl:relative xl:order-1 xl:block xl:w-auto xl:max-w-96 xl:rounded"
+                  lazy
+                />
+              </CarouselItem>
+            </CarouselContent>
+          </Carousel>
+        </div>
+
+        <p class="px-4 text-2xl xl:px-0">
           Das neue Küchenkonzept stammt aus der Feder des renommierten
           Slow-Food-Kochs Moritz Stiefel. «Mo», ist, zusammen mit seiner Frau
           Luigina, Betreiber des Hopfenkranzes in Luzern, wo er ein streng
