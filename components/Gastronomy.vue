@@ -58,13 +58,15 @@ const imagePaths = [
             <CarouselItem
               v-for="(image, index) in imagePaths"
               :key="index"
-              class="flex max-h-[800px] items-center overflow-hidden xl:max-h-none xl:flex-none"
+              class="flex max-h-[600px] items-center overflow-hidden xl:max-h-none xl:flex-none"
             >
-              <img
+              <NuxtImg
                 :src="image.path"
                 :alt="image.title"
                 class="w-min snap-center drop-shadow-light transition-all duration-300 ease-out xl:relative xl:order-1 xl:block xl:w-auto xl:max-w-96 xl:rounded"
-            /></CarouselItem>
+                lazy
+              />
+            </CarouselItem>
           </CarouselContent>
         </Carousel>
       </div>

@@ -13,6 +13,7 @@
     "generate:api-client": "openapi-generator-cli generate -i infomaniak_api.json -g typescript-axios -o server/api/infomaniak --skip-validate-spec"
   },
   "dependencies": {
+    "@nuxt/image": "^1.10.0",
     "@nuxtjs/color-mode": "3.5.2",
     "@pinia/nuxt": "0.9.0",
     "@vueuse/core": "^12.7.0",
@@ -20,9 +21,9 @@
     "axios": "^1.7.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "embla-carousel-vue": "^8.5.2",
     "embla-carousel-autoplay": "^8.5.2",
     "embla-carousel-fade": "^8.5.2",
+    "embla-carousel-vue": "^8.5.2",
     "lucide-vue-next": "^0.474.0",
     "nuxt": "^3.15.4",
     "pinia": "^2.3.0",
