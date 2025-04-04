@@ -51,7 +51,7 @@ const imagePaths = [
           ]"
           :opts="{
             align: 'end',
-            loop: false,
+            loop: true,
           }"
         >
           <CarouselContent>
