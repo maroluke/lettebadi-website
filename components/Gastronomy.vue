@@ -1,44 +1,35 @@
 <script setup lang="ts">
 import { UiMainTitle } from '#components';
-import { useParallax, useScroll } from '@vueuse/core';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/shadcn/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+import Fade from 'embla-carousel-fade';
 
-const target = ref<HTMLElement | null>(null);
-const parallax = reactive(useParallax(target));
-const { y } = useScroll(window);
-const isPhoneScreen = ref(false);
-
-const xValue = ref(0);
-const yValue = ref(0);
-const yValueRoll = ref(0);
-
-const layer0 = computed(() => ({
-  transform: `translateX(${parallax.tilt * xValue.value}px) translateY(${
-    y.value * yValue.value + parallax.roll * yValueRoll.value
-  }px) scale(1)`,
-}));
-
-// Check if device has a phone screen size
-const checkPhoneScreen = () => {
-  const mediaQuery = window.matchMedia('(max-width: 768px)');
-  isPhoneScreen.value = mediaQuery.matches;
-  mediaQuery.addEventListener('change', (e) => {
-    isPhoneScreen.value = e.matches;
-  });
-};
-
-onMounted(() => {
-  checkPhoneScreen();
-  xValue.value = -5;
-  yValue.value = -0.075;
-  yValueRoll.value = -30;
-});
-
-onUnmounted(() => {
-  const mediaQuery = window.matchMedia('(max-width: 768px)');
-  mediaQuery.removeEventListener('change', (e) => {
-    isPhoneScreen.value = e.matches;
-  });
-});
+const imagePaths = [
+  {
+    path: '/media/menu-1.jpg',
+    title: 'Tagesmenu Lettebadi',
+  },
+  {
+    path: '/media/menu-3.jpg',
+    title: 'Tagesmenu Lettebadi',
+  },
+  {
+    path: '/media/menu-2.jpg',
+    title: 'Tagesmenu Lettebadi',
+  },
+  {
+    path: '/media/menu-4.jpg',
+    title: 'Tagesmenu Lettebadi',
+  },
+  {
+    path: '/media/menu-5.jpg',
+    title: 'Tagesmenu Lettebadi',
+  },
+];
 </script>
 
 <template>
@@ -50,12 +41,29 @@ onUnmounted(() => {
     <section
       class="relative flex flex-col items-center gap-20 px-4 xl:flex-row xl:px-0"
     >
-      <img
-        :style="layer0"
-        src="~/assets/media/menu.jpg"
-        alt="Tagesmenu Lettebadi"
-        class="absolute -right-10 top-0 z-10 order-2 hidden w-36 rounded drop-shadow-light transition-all duration-300 ease-out xl:relative xl:order-1 xl:block xl:w-auto xl:max-w-96"
-      />
+      <div class="w-[384px]">
+        <Carousel
+          :plugins="[
+            Autoplay({
+              delay: 2000,
+            }),
+            Fade(),
+          ]"
+          :opts="{
+            align: 'end',
+            loop: false,
+          }"
+        >
+          <CarouselContent>
+            <CarouselItem v-for="(image, index) in imagePaths" :key="index">
+              <img
+                :src="image.path"
+                :alt="image.title"
+                class="w-36 rounded drop-shadow-light transition-all duration-300 ease-out xl:relative xl:order-1 xl:block xl:w-auto xl:max-w-96"
+            /></CarouselItem>
+          </CarouselContent>
+        </Carousel>
+      </div>
 
       <div class="z-20 order-1 max-w-screen-md xl:order-2">
         <UiSectionTitle title="Gastronomie" />

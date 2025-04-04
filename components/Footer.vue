@@ -24,20 +24,6 @@
               <RouterLink to="/agb">
                 <UiButton label="AGB" class="text-sm font-normal opacity-50" />
               </RouterLink>
-
-              <RouterLink to="/impressum">
-                <UiButton
-                  label="Impressum"
-                  class="text-sm font-normal opacity-50"
-                />
-              </RouterLink>
-
-              <RouterLink to="/privacy">
-                <UiButton
-                  label="Datenschutz"
-                  class="text-sm font-normal opacity-50"
-                />
-              </RouterLink>
             </p>
           </div>
         </div>

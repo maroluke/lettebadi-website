@@ -1,8 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div id="events" class="flex flex-col gap-8 grow mx-auto pb-32">
-    <section class="rounded-xl flex gap-20 items-center">
+  <div id="events" class="mx-auto flex grow flex-col gap-8 pb-32">
+    <section class="flex items-center gap-20 rounded-xl">
       <img
         src="~/assets/media/menu.jpg"
         alt="Tagesmenu Lettebadi"
@@ -10,10 +10,10 @@
       />
 
       <div class="max-w-screen-md">
-        <h2 class="text-6xl mb-10">
+        <h2 class="mb-10 text-6xl">
           Wir präsentieren das Tagesmenü von heute:
         </h2>
-        <p class="text-2xl mb-5">
+        <p class="mb-5 text-2xl">
           Genießen Sie heute ein köstliches Menü aus frischen Zutaten.
         </p>
 
@@ -23,7 +23,7 @@
           kreativen Kombinationen überraschen. Wir freuen uns auf Ihren Besuch!
         </p>
 
-        <div class="flex flex-col gap-8 mt-20">
+        <div class="mt-20 flex flex-col gap-8">
           <div class="flex gap-10">
             <div class="flex flex-col gap-8">
               <div>
