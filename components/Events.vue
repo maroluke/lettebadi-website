@@ -218,7 +218,7 @@ declare global {
         <!-- Replace your calendar with Cal.com embed -->
         <div v-else class="calendar-container w-full max-w-[500px]">
           <div
-            class="h-full w-full overflow-scroll drop-shadow"
+            class="h-full w-full overflow-scroll rounded border"
             id="my-cal-inline"
           ></div>
         </div>
