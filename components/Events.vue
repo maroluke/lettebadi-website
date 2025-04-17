@@ -173,7 +173,7 @@ declare global {
 <template>
   <section class="flex flex-col gap-10 pt-20 xl:pt-32">
     <div
-      class="mx-auto flex w-full max-w-screen-2xl flex-col items-start justify-center px-4 xl:flex-row xl:gap-32"
+      class="mx-auto flex w-full max-w-screen-2xl flex-col items-start justify-center xl:flex-row xl:gap-32 xl:px-4"
     >
       <div
         id="events"
