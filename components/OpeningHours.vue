@@ -50,8 +50,8 @@ const { eventData, status } = defineProps({
             </p>
             <p class="mb-5 text-2xl">
               <strong>Gastro Pop-Up im Herbst</strong><br />22. September bis
-              31. Oktober.<br />
-              <a href="#" class="underline">Lesen Sie hier mehr</a>.
+              31. Oktober.
+              <!-- <a href="#" class="underline">Lesen Sie hier mehr</a>. -->
             </p>
           </div>
 
