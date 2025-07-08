@@ -86,7 +86,7 @@ const imagePaths = [
           eines nachhaltigen Denkens, sondern auch eine bewusste Abgrenzung vom
           «Badi-Food» der 70er bis 90er Jahre. Dies bedeutet jedoch nicht, dass
           wir vollständig auf klassische Produkte wie Pommes Frites verzichten –
-          nur machen wir sie täglich frisch, und aus Zürcher Kartoffeln!
+          nur machen wir sie täglich frisch, und aus Schweizer Kartoffeln!
         </p>
 
         <div class="z-10 my-10 w-full xl:hidden xl:w-[384px]">
@@ -122,14 +122,14 @@ const imagePaths = [
 
         <p class="px-4 text-2xl xl:px-0">
           Das neue Küchenkonzept stammt aus der Feder des renommierten
-          Slow-Food-Kochs Moritz Stiefel. «Mo», ist, zusammen mit seiner Frau
+          Slow-Food-Kochs Moritz Stiefel. «Mo» war, zusammen mit seiner Frau
           Luigina, Betreiber des Hopfenkranzes in Luzern, wo er ein streng
-          regionales und saisonales Konzept verfolgt. Dieses hat nicht nur seine
-          Gäste, sondern auch den Guide Michelin und Gault Millau überzeugt.
-          Moritz legt höchsten Wert darauf, ausschliesslich vorzügliche Produkte
-          von Produzent*innen zu verwenden, die er persönlich kennt. Diese
-          Philosophie prägt auch unser gastronomisches Angebot und garantiert
-          Qualität auf höchstem Niveau.
+          regionales und saisonales Konzept verfolgte. Dieses hat nicht nur
+          seine Gäste, sondern auch den Guide Michelin und Gault Millau
+          überzeugte. Moritz legt höchsten Wert darauf, ausschliesslich
+          vorzügliche Produkte von Produzent*innen zu verwenden, die er
+          persönlich kennt. Diese Philosophie prägt auch unser gastronomisches
+          Angebot und garantiert Qualität auf höchstem Niveau.
         </p>
       </div>
     </section>

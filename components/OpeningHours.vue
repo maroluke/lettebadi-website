@@ -37,19 +37,19 @@ const { eventData, status } = defineProps({
           <UiSectionTitle title="Öffnungszeiten und Kontakt" />
 
           <UiMainTitle
-            title="Täglich geöffnet<br />von 09:00<br />bis 22:00 Uhr"
+            title="Täglich geöffnet<br />von 09:00<br />bis 21:00 Uhr"
           />
 
           <div>
             <p class="mb-5 text-2xl">
-              Bei Schlechtwetter schliesst die Badi um 14 Uhr.
+              Bei Schlechtwetter schliesst die Badi gegebenenfalls früher.
             </p>
             <p class="mb-5 text-2xl">
-              <strong>Badisaison</strong><br />Von 15. Mai bis 15. September
+              <strong>Badisaison</strong><br />Von 10. Mai bis 21. September
               2025
             </p>
             <p class="mb-5 text-2xl">
-              <strong>Gastro Pop-Up im Herbst</strong><br />15. September bis
+              <strong>Gastro Pop-Up im Herbst</strong><br />22. September bis
               31. Oktober.<br />
               <a href="#" class="underline">Lesen Sie hier mehr</a>.
             </p>

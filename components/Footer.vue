@@ -10,7 +10,7 @@
         <div class="max-w-screen-sm">
           <div>
             <p class="mb-5 text-2xl">
-              Lettebadi GmbH<br />
+              Lettenbadi GmbH<br />
               Lettensteg 10<br />
               8037 Zürich
             </p>
