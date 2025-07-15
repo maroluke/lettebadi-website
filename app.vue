@@ -37,6 +37,8 @@ onMounted(async () => {
 
     <Events />
 
+    <Reservation />
+
     <!-- <EventTypes :data="eventData" :status="status" /> -->
 
     <OpeningHours />
