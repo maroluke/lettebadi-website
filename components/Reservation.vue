@@ -21,7 +21,7 @@ import { ref, onMounted } from 'vue';
         </div>
 
         <!-- Button -->
-        <Button class="h-14 w-full text-2xl">
+        <Button class="h-14 w-full max-w-96 text-2xl">
           <a
             href="https://mylocalina.ch/widget/?id=4de13c45-f256-4e2d-b8b2-7dd009e3b483"
             target="_blank"
