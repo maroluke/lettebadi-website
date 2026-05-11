@@ -42,13 +42,13 @@ const { eventData, status } = defineProps({
               </div>
 
               <div>
-                <p class="text-2xl font-bold">31. Mai bis 22. August 2026</p>
+                <p class="text-2xl font-bold">31. Mai bis 16. August 2026</p>
                 <p class="text-2xl">09:00 bis 21:00 Uhr</p>
               </div>
 
               <div>
                 <p class="text-2xl font-bold">
-                  16. August bis 5. September 2026
+                  17. August bis 5. September 2026
                 </p>
                 <p class="text-2xl">09:00 bis 20:00 Uhr</p>
               </div>
