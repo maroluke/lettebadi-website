@@ -5,7 +5,7 @@
     <section class="flex gap-20 rounded-xl">
       <div>
         <UiMainTitle title="Eine der beliebtesten Badeanstalten der Stadt" />
-        <Lettegump class="max-w-[50%] pb-20 xl:hidden" />
+        <Lettegump class="max-w-[40%] pb-20 md:max-w-[20%] xl:hidden" />
         <p class="mb-5 text-2xl">
           Die Lettebadi ist seit den 1950er-Jahren eine der beliebtesten
           Badeanstalten der Stadt. Doch sie ist weit mehr als nur ein Flussbad:

@@ -33,7 +33,7 @@ const subscribe = async () => {
 
 <template>
   <div
-    class="subscription-form z-20 mx-auto mt-20 flex max-w-screen-sm flex-col p-4 xl:mt-40"
+    class="subscription-form z-20 mx-auto my-20 flex max-w-screen-sm flex-col p-4 xl:mt-40"
   >
     <UiMainTitle
       v-if="subscriptionVisible"

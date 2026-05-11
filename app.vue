@@ -17,7 +17,11 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="relative flex flex-col overflow-hidden">
+  <div
+    class="bg-primary-darker/75 fixed bottom-0 left-0 z-50 h-[10%] w-full backdrop-blur-lg"
+  ></div>
+
+  <div class="relative flex min-h-dvh flex-col overflow-hidden">
     <div class="fixed left-0 right-0 top-0 z-50 xl:p-8">
       <section
         class="flex w-full shrink items-center justify-between rounded bg-white px-4 drop-shadow-lg xl:px-20 xl:drop-shadow-2xl"
@@ -26,10 +30,6 @@ onMounted(async () => {
         <Nav :activeSection="activeSection" />
       </section>
     </div>
-
-    <div
-      class="bg-primary-darker/75 fixed bottom-0 left-0 z-50 h-[10%] w-full backdrop-blur-lg"
-    ></div>
 
     <div id="about" class="relative grow">
       <AppIntro />
