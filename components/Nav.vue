@@ -30,11 +30,6 @@ const props = defineProps<{
       :label="'Veranstaltungen'"
     />
     <NavLink
-      :active="activeSection === 'reservation'"
-      :id="'reservation'"
-      :label="'Reservation'"
-    />
-    <NavLink
       :active="activeSection === 'opening-hours'"
       :id="'opening-hours'"
       :label="'Öffnungszeiten und Kontakt'"

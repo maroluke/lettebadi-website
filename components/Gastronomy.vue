@@ -81,12 +81,12 @@ const imagePaths = [
         />
 
         <p class="mb-5 px-4 text-2xl xl:px-0">
-          Ab dieser Saison wird das gesamte Food- und Beverage-Angebot in der
-          Lettebadi auf Bio umgestellt. Dieser Schritt ist nicht nur Ausdruck
-          eines nachhaltigen Denkens, sondern auch eine bewusste Abgrenzung vom
+          Das gesamte Food- und Beverage-Angebot in der Lettebadi wurde 2025 auf
+          Bio umgestellt. Dieser Schritt ist nicht nur Ausdruck eines
+          nachhaltigen Denkens, sondern auch eine bewusste Abgrenzung vom
           «Badi-Food» der 70er bis 90er Jahre. Dies bedeutet jedoch nicht, dass
-          wir vollständig auf klassische Produkte wie Pommes Frites verzichten –
-          nur machen wir sie täglich frisch, und aus Schweizer Kartoffeln!
+          wir vollständig auf klassische Badi-Produkte verzichten – nur machen
+          wir sie täglich frisch, und aus Schweizer Rohstoffen!
         </p>
 
         <div class="z-10 my-10 w-full xl:hidden xl:w-[384px]">
@@ -121,15 +121,11 @@ const imagePaths = [
         </div>
 
         <p class="px-4 text-2xl xl:px-0">
-          Das neue Küchenkonzept stammt aus der Feder des renommierten
-          Slow-Food-Kochs Moritz Stiefel. «Mo» war, zusammen mit seiner Frau
-          Luigina, Betreiber des Hopfenkranzes in Luzern, wo er ein streng
-          regionales und saisonales Konzept verfolgte. Dieses hat nicht nur
-          seine Gäste, sondern auch den Guide Michelin und Gault Millau
-          überzeugte. Moritz legt höchsten Wert darauf, ausschliesslich
-          vorzügliche Produkte von Produzent*innen zu verwenden, die er
-          persönlich kennt. Diese Philosophie prägt auch unser gastronomisches
-          Angebot und garantiert Qualität auf höchstem Niveau.
+          Das Küchenkonzept in der Saison 2025 stammte aus der Feder des
+          renommierten Slow-Food-Kochs Moritz Stiefel. «Mo» legt höchsten Wert
+          darauf, ausschliesslich vorzügliche Produkte von Produzent*innen zu
+          verwenden, die er persönlich kennt. Diese Philosophie prägt auch unser
+          gastronomisches Angebot und garantiert Qualität auf höchstem Niveau.
         </p>
       </div>
     </section>

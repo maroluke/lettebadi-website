@@ -27,7 +27,11 @@ onMounted(async () => {
       </section>
     </div>
 
-    <div id="about" class="grow">
+    <div
+      class="bg-primary-darker/75 fixed bottom-0 left-0 z-50 h-[10%] w-full backdrop-blur-lg"
+    ></div>
+
+    <div id="about" class="relative grow">
       <AppIntro />
     </div>
 
@@ -37,16 +41,10 @@ onMounted(async () => {
 
     <Events />
 
-    <Reservation />
-
-    <!-- <EventTypes :data="eventData" :status="status" /> -->
-
     <OpeningHours />
   </div>
 
   <section
     class="fixed bottom-0 left-0 right-0 top-0 -z-10 h-full w-screen text-primary"
-  >
-    <WavesBg />
-  </section>
+  ></section>
 </template>

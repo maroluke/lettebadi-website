@@ -48,15 +48,12 @@ onUnmounted(() => {
     ref="target"
     class="relative flex min-w-full flex-col items-center justify-between px-4 transition-all duration-300 ease-out xl:min-h-screen xl:max-w-screen-3xl xl:flex-row xl:px-28"
   >
-    <div class="z-20 mx-auto max-w-screen-md xl:w-1/2">
-      <AboutUs />
+    <div class="relative hidden max-h-full w-full pr-20 xl:block xl:w-1/2">
+      <Lettegump class="max-w-[50%]" />
     </div>
 
-    <div class="relative h-96 w-full xl:h-auto xl:w-1/2">
-      <FloatingWomen1
-        :style="layer0"
-        class="absolute -top-40 z-0 h-full w-full max-w-screen-xl text-primary drop-shadow-light transition-all duration-300 ease-out xl:relative xl:-top-0"
-      />
+    <div class="z-20 mx-auto max-w-screen-md xl:w-1/2">
+      <AboutUs />
     </div>
   </div>
 </template>

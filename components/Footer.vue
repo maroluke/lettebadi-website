@@ -1,13 +1,12 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div
-    id="contact"
-    class="mx-auto flex w-full max-w-screen-2xl flex-col gap-8 pb-40 pt-10"
-  >
+  <div id="contact" class="flex flex-col gap-8">
     <section class="rounded-xl">
       <div class="flex items-center gap-8">
         <div class="max-w-screen-sm">
+          <UiMainTitle title="Kontakt" />
+
           <div>
             <p class="mb-5 text-2xl">
               Lettenbadi GmbH<br />

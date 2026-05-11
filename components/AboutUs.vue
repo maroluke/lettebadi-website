@@ -1,11 +1,11 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="mx-auto flex flex-col gap-8 py-32">
+  <div class="mx-auto flex flex-col gap-8 pb-8 pt-24 xl:py-32">
     <section class="flex gap-20 rounded-xl">
       <div>
-        <UiSectionTitle title="Badi" />
         <UiMainTitle title="Eine der beliebtesten Badeanstalten der Stadt" />
+        <Lettegump class="max-w-[50%] pb-20 xl:hidden" />
         <p class="mb-5 text-2xl">
           Die Lettebadi ist seit den 1950er-Jahren eine der beliebtesten
           Badeanstalten der Stadt. Doch sie ist weit mehr als nur ein Flussbad:
