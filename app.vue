@@ -35,8 +35,6 @@ onMounted(async () => {
       <AppIntro />
     </div>
 
-    <UiSubscribeForm />
-
     <Gastronomy />
 
     <Events />
